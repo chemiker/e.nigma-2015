@@ -1,0 +1,69 @@
+/* line 5, ../../app/stylesheets/popover.scss */
+.popover {
+	max-width: 500px;
+	position: absolute;
+	display: none;
+	opacity: 0;
+	cursor: auto;
+	color: #494949;
+  background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+	border: 1px solid #bfbfbf;
+	padding: 15px;
+	font-size: 0.8em;
+  background: -webkit-linear-gradient(top, #fff, #dcdcdc);
+  background: -moz-linear-gradient(top, #fff, #dcdcdc);
+  background: -ms-linear-gradient(top, #fff, #dcdcdc);
+  background: -o-linear-gradient(top, #fff, #dcdcdc);
+}
+/* line 17, ../../app/stylesheets/popover.scss */
+.popover.active {
+	opacity: 1;
+}
+/* line 21, ../../app/stylesheets/popover.scss */
+.popover > .triangle {
+	position: absolute;
+	width: 0px;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid transparent;
+}
+/* line 29, ../../app/stylesheets/popover.scss */
+.popover > .triangle.top {
+	bottom: -40px;
+	border-top: 20px solid #fff;
+}
+/* line 34, ../../app/stylesheets/popover.scss */
+.popover > .triangle.bottom {
+	top: -40px;
+	border-bottom: 20px solid #fff;
+}
+/* line 39, ../../app/stylesheets/popover.scss */
+.popover > .triangle.left {
+	right: -40px;
+	border-left: 20px solid #fff;
+}
+/* line 44, ../../app/stylesheets/popover.scss */
+.popover > .triangle.right {
+	left: -40px;
+	border-right: 20px solid #fff;
+}
+/* line 50, ../../app/stylesheets/popover.scss */
+.popover > .header {
+	margin: 0;
+	padding: 3px;
+	height: 1.25em;
+	text-align: center;
+	font: 1.5em/1.2 'Raleway', Georgia, sans;
+	color: #333;
+    padding-bottom: 10px;
+}
+/* line 64, ../../app/stylesheets/popover.scss */
+.popover > .content {
+  margin-top: 20px;
+	min-width: 15em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
