@@ -1,0 +1,28 @@
+/* -------------------------------- Wrapper */
+
+body {
+	font: #{$textsize}/1.85 $sans;
+	color: $darkbeige;
+	background-color: $darkbeige;
+}
+
+#wrapper {
+	background-color: $beige;
+}
+
+header nav ul,
+.modifyme {
+	margin: 0px auto 0px auto;
+}
+
+.hide {
+	display: none;
+}
+
+.modifyme {
+	width: $textwidth;
+}
+
+.singlepage {
+	padding-top: 2em;
+}

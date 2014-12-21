@@ -1,0 +1,51 @@
+/* -------------------------------- Search & Form Elements */
+
+input,
+textarea {
+	font: 20px/1.5 $sans;
+	color: $darkbeige;
+	padding: 5px 10px 5px 10px;
+	border: 2px solid #CCC;
+	@include border-radius( 10px );
+	background: rgba( 0, 0, 0, 0);
+
+	&:focus {
+		outline: none;
+		border-color: $darkbeige;
+	}
+}
+
+input[type=submit] {
+	cursor: pointer;
+	color: #7a7a7a;
+	
+	&:hover {
+		color: $darkbeige;
+		border-color: $darkbeige;
+	}
+}
+
+input.searchfield {
+	width: 240px;
+}
+
+ol.commentlist {
+	input,
+	textarea {
+		color: $lightgrey;
+
+		&:focus {
+			outline: none;
+			border-color: #FFF;
+		}
+	}
+
+	input[type=submit] {
+		color: $lightgrey;
+
+		&:hover {
+			border-color: #FFF;
+			color: #FFF;
+		}
+	}
+}

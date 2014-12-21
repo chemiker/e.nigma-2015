@@ -1,0 +1,193 @@
+/* -------------------------------- Navigation */
+
+header {
+	div#navigationwrapper {
+		position: fixed;
+		width: 100%;
+		z-index: 9999;
+	}
+
+	nav {
+		font: {
+			family: $iconfont, sans-serif;
+			size: 1.4em;
+		}
+		background-color: $navigationbackground;
+		text-align: center;
+		padding: 10px 25px 10px 25px;
+		height: 15px;
+
+		a,
+		a:visited {
+			color: $beige;
+			text-decoration: none;
+			display: block;
+			height: 65px;
+			line-height: 65px;
+			background-color: $navigationbackground;
+			margin-top: -12px;
+			width: 55px;
+		}
+	}
+
+	a#hamburger {
+		margin: -12px auto 0 auto;
+		@include border-radius( 35px );
+		width: 65px;
+		cursor: pointer;
+
+		&:hover {
+			color: $beige;
+		}
+	}
+}
+
+#topnavigation {
+	display: none;
+	width: 240px;
+	margin {
+		left: auto;
+		right: auto;
+	}
+
+	li {
+		display: inline-block;
+	}
+}
+
+#search_link,
+#information_link {
+	width: 55px;
+}
+
+#search_link {
+	@include border-bottom-right-radius( 35px );
+	padding-right: 10px;
+	margin-left: -1px;
+}
+
+#information_link {
+	@include border-bottom-left-radius( 35px );
+	padding-left: 10px;
+	margin-right: -1px;
+}
+
+.tag-cloud {
+	text-align: center;
+
+	a,
+	a:visited {
+		text-decoration: none;
+		line-height: 1em;
+		color: #808080;
+	}
+
+	a:hover {
+		color: #333;
+	}
+}
+
+div.pagebar {
+	color: $darkbeige;
+	text-align: center;
+	padding: 80px 0 100px 0;
+	font-size: 0.8em;
+	border-top: 7px solid $darkbeige;
+	background-color: $beige;
+	margin-top: -66px;
+
+	&.sitepages {
+		margin-top: 0px;
+		border-top: none;
+		padding: 60px 0 40px 0;
+	}
+
+	span.page-numbers,
+	a.page-numbers,
+	a.page-numbers:visited,
+	a.page,
+	a.page:visited, {
+		line-height: 40px;
+		font-weight: bold;
+		width: 26px;
+		height: 40px;
+		padding: 0 8px 0 8px;
+		@include border-radius( 24px );
+		display: inline-block;
+	}
+
+	span.page-numbers,
+	a.page-numbers {
+		font-size: 1.3em;
+		margin-right: 5px;
+	}
+
+	span.page-numbers {
+		color: $navigationbackground;
+		background-color: $darkbeige;
+		border: 3px solid $navigationbackground;
+	}
+
+	&.comment {
+		background-color: $darkbeige;
+		margin-top: 0px;
+		padding: 40px 0 0px 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: $navigationbackground;
+		line-height: 40px;
+
+
+		&:last-child {
+			margin: 0 3px 0 3px;
+		}
+
+		&.page,
+		&.page:visited,
+		&.page-numbers,
+		&.page-numbers:visited {
+			color: $beige;
+			background-color: $navigationbackground;
+			border: 3px solid $beige;
+		}
+
+		&:hover,
+		&.active,
+		&.active:visited,
+		&.page:hover,
+		&.next.page-numbers,
+		&.prev.page-numbers {
+			color: $navigationbackground;
+			border-color: $navigationbackground;
+			background-color: $beige;
+		}
+
+		&.page-numbers,
+		&.page-numbers:visited {
+			margin-right: 5px;
+			background-color: $darkbeige;
+		}
+
+		&.next.page-numbers,
+		&.prev.page-numbers {
+			font-size: 1.3em;
+			border: none;
+			display: inline;
+			font-weight: normal;
+			color: $beige;
+			background-color: $darkbeige;
+		}
+	}
+}
+
+span.pagebar-category {
+	top: -30px !important;
+}
+
+span.pagebar-category,
+span.category-light {
+	background-color: $beige !important;
+	color: $darkbeige !important;
+}

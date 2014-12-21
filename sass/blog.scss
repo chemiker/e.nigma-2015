@@ -1,0 +1,346 @@
+/* -------------------------------- Blog */
+
+section {
+	background-color: $beige;
+}
+
+article,
+aside,
+div#comment_form {
+	padding: 0px 0 60px 0;
+	color: $darkbeige;
+	border-top: 7px solid $darkbeige;
+	background-size: 100% auto;
+}
+
+article {
+	&.attachment {
+		text-align: center;
+	}
+
+	&.format-image,
+	&.format-gallery {
+		box-shadow: inset 0px 0px 30px $darkbeige;
+		background-color: $darkbeige;
+	}
+
+	&.format-image {
+		min-height: 400px;
+		@include background-size( cover );
+		background-position: center center;
+	}
+
+	&.format-gallery {
+		h2 {
+			a,
+			a:visited {
+				color: #FFF;
+			}
+
+			a:hover {
+				color: $lightgrey;
+			}
+		}
+	}
+
+	&.sticky { 
+		display: block;
+	}
+
+	a[rel=tag]:before {
+		content: "\e604";
+		padding-right: 0.4em;
+		font-family: $iconfont;
+	}
+
+	a[rel=tag] {
+		display: inline-block;
+		background-color: $darkbeige;
+		color: $beige;
+		padding: 5px 8px 5px 8px;
+		margin: 3px;
+		text-decoration: none;
+		font-size: 0.8em;
+		@include border-radius( 8px );
+		white-space: nowrap;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	p {
+		margin: 1.7em 0 1.7em 0;
+		hyphens: auto;
+	}
+
+	iframe {
+		display: block;
+		margin: 0 auto 1em auto;
+		border: none;
+	}
+
+	img {
+		max-width: 100%;
+		@include border-radius( 5px );
+		margin: {
+			top: 0.5em;
+			bottom: -0.7em;
+		}
+
+		&.wp-post-image {
+			margin-top: 1em;
+		}
+	}
+
+	pre {
+		white-space: pre;
+		@include border-radius( 5px );
+		margin: 1.5em 0 0 0;
+
+		code {
+			padding: 8px 5px 8px 5px;
+			line-height: 0.8em;
+			font-size: 0.8em;
+		}
+	}	
+
+	code {
+		white-space: pre;
+		font-family: $code;
+		overflow: auto;
+		display: block;
+		background-color: #E7E7E7;
+		color: $darkbeige;
+		padding: 5px;
+	}
+
+	li {
+		font-size: 0.95em;
+		opacity: 0.85;
+	}
+
+	ul {
+		list-style-type: circle;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+
+	dl {
+		display: inline;
+		float: right;
+		width: 100px;
+	}
+
+	sup {
+		font-size: 0.7em;
+	}
+
+	table {
+		font-size: 0.8em;
+		border-bottom: 2px solid $darkbeige;
+		margin: 1.5em auto 1.5em auto;
+		padding: 0px;
+		height: auto;
+		width: 80%;
+
+		&.tablepress {
+			border-bottom: 2px solid $darkbeige !important;
+			margin: 1.5em auto 1.5em auto !important;
+			padding: 0px !important;
+		}
+	}
+
+
+	.gist table {
+		border-bottom: none;
+	}
+
+	tr {
+		margin: 0px;
+
+		th {
+			background: none !important;
+			border: {
+				top: 2px solid $darkbeige !important;
+				bottom: 1px solid $darkbeige !important;
+			}
+		}
+
+		td {
+			border: none !important;
+			margin: 0px;
+			line-height: 1.3em !important;
+		}
+	}
+
+	hr {
+		margin-bottom: 0px;
+	}
+
+	form.post-password-form {
+		text-align: center;
+	}
+
+	.post-meta {
+		display: block;
+		margin: 0.2em 0 1em 0;
+		text-align: center;
+		font-size: 15px;
+		opacity: 0.8;
+
+		&-date,
+		&-category {
+			margin-right: 1em;
+		}
+
+		&-date {
+			cursor: help;
+		}
+
+		$metasymbols: (
+			date: $calendar,
+			category: $category,
+			comments: $comments
+		);
+
+		@each $name, $icon in $metasymbols {
+			&-#{$name}:before {
+				padding-right: 0.5em;
+				font-family: $iconfont;
+				content: $icon;
+			}
+		}
+	}
+
+	&.format-image {
+		h2 {
+			a,
+			a:visited {
+				color: $beige;
+				background-color: $post-image-headline-background;
+				@include border-radius( 5px );
+				padding: 10px 15px 10px 15px;
+
+			}
+
+			a:hover {
+				background-color: $darkbeige;
+			}
+		}
+
+		.post-meta {
+			color: $beige;
+			@include text-shadow($darkbeige 0px 0px 12px, $darkbeige 0px 0px 12px);
+
+			a,
+			a:visited {
+				color: $beige;
+			}
+		}
+	}
+
+	$headings: (
+		("h2", $h2, 0),
+		("h3", $h3, 1em),
+		("h3.comment-reply-title", $h3, 0),
+		("h4", $h4, 1em),
+		("h5", $h5, 1em),
+		("h6", $h6, 1em),
+	);
+
+	@each $level, $fontsize, $margintop in $headings {
+		#{$level} a,
+		#{$level} a:visited {
+			text-decoration: none;
+			color: #333;
+		}
+
+		#{$level} {
+			text: {
+				align: center;
+			}
+			font: #{$fontsize}/1.4 $condensed {
+			}
+			margin-top: #{$margintop};
+		}
+
+	}
+
+	div.tags {
+		margin-top: 5em;
+	}
+
+	div.single-page h2 {
+		font-size: 3em;
+	}
+}
+
+ol.footnotes {
+	font-size: 0.8em;
+	margin-bottom: 2em;
+
+	li {
+		color: $navigationbackground;
+
+		 p {
+			margin: 0.65em 0 0.65em 0;
+			line-height: 1.5em;
+			
+			a,
+			a:visited {
+				color: $navigationbackground;
+			}
+		}
+	}	 
+}
+
+hr.footnotes {
+	margin-bottom: 1.5em;
+	background: $navigationbackground;
+	width: 5em;
+}
+
+a.more-link,
+a.more-link:visited {
+	background-color: $darkbeige;
+	border-color: $beige;
+	color: $beige;
+	margin: 3em auto 0 auto;
+	display: block;
+	width: 156px;
+	text: {
+		align: center;
+		transform: capitalize;
+		decoration: none;
+	}
+}
+
+a.more-link:hover {
+	color: $darkbeige;
+	border-color: $darkbeige;
+	background-color: transparent;
+}
+
+span.category {
+	margin: 0 auto 0 auto;
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: relative;
+	top: -35px;
+	color: $beige;
+	@include border-radius( 35px );
+	background-color: $darkbeige;
+	text-align: center;
+	font: 1.5em/65px $iconfont, sans-serif, sans;
+}
+
+.link_arrow {
+	opacity: 0.6;
+	font-family: $arrow;
+	margin-left: 0.3em;
+}

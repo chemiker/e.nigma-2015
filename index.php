@@ -4,62 +4,43 @@
 	<?php while(have_posts()): the_post(); ?>
 	<?php 
 		$format = get_post_format();
-
-		if ( ! $format )
-			$format = '';
-
-		// Set Category Symbol
-		switch ( $format ) {
-			case 'link' :
-				$category_symbol = '&#58880;';
-			break;
-			case 'audio' :
-				$category_symbol = '&#58881;';
-			break;
-			case 'video' :
-				$category_symbol = '&#58883;';
-			break;
-			case 'quote' :
-				$category_symbol = '&#58885;';
-			break;
-			case 'aside' :
-				$category_symbol = '&#58891;';
-			break;
-			case 'image' :
-				$category_symbol = '&#58882;';
-			break;
-			default :
-				$category_symbol = '&#58896;';
-			break;
-		}
-
-		// Adjust Headline
-		switch ( $format ) {
-			case 'link' :
-				$headline = '<h2><a href="' . get_post_meta( get_the_ID(), '_format_link_url', true ) . '">' . get_the_title() . '<span class="link_arrow">&#x2192;</span></a></h2>';
-			break;
-			case 'quote' :
-				$headline = NULL;
-			break;
-			default :
-				$headline = '<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
-			break;
-		}
+		$post_vars = \enigma\Content::get_post_vars( $format );
 	?>
-	<article <?php post_class(); ?>>
+	<article <?php post_class(); ?>  <?php echo $post_vars['css'] ?>>
 		<div class="modifyme">
-			<span class="category">
-				<?php echo $category_symbol; ?>
-			</span>
-			<?php echo $headline; ?>
-			<?php the_content( 'Weiterlesen…' ); ?>
+			<span class="category enigma-icon" data-icon="<?php echo $post_vars['category_symbol']; ?>"></span>
+			<?php echo $post_vars['headline']; ?>
+			<?php echo $post_vars['thumbnail'] ?>
+			<?php echo apply_filters( 'the_content', $post_vars['content'] ); ?>
+			<div class="post-meta">
+				<?php echo $post_vars['meta'] ?>
+				<?php if ( comments_open() ) : ?>
+					<span class="post-meta-comments"><?php comments_popup_link(); ?></span>
+				<?php endif; ?>
+			</div>
 		</div>
 	</article>
-	<?php do_action( 'art_direction' ); ?>
 	<?php endwhile; ?>
 <?php else : ?>
-	<h2>Couldn’t find any articles!</h2>
+	<article <?php post_class(); ?>  <?php echo $post_vars['css'] ?>>
+		<div class="modifyme">
+			<span class="category" data-icon="?"></span>
+			<h2><?php _e('Couldn\'t find any articles!'); ?></h2>
+		</div>
+	</article>
 <?php endif; ?>
 
+<?php
+	global $wp_query;
+	
+	if ( $wp_query->max_num_pages > 1 ) :
+		?> <span class="category pagebar-category enigma-icon" data-icon="&#58914;"></span><div class="pagebar"> <?php 
+		previous_posts_link(); 
+		\enigma\Content::Pagebar();
+		next_posts_link();
+		?> </div> <?php
+	endif;
+?>
+
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer();

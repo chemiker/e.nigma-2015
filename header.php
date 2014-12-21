@@ -1,77 +1,31 @@
 <?php ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>" />
-	<title><?php
-		global $page, $paged;
-		wp_title('|', true, 'right');
-		bloginfo('name');
-		$site_description = get_bloginfo('description', 'display');
-		if ($site_description && (is_home() || is_front_page())) { echo " | $site_description"; }
-		if ( $paged >= 2 || $page >= 2 ) { echo ' | ' . sprintf('Page %s', max($paged, $page)); }
-		?></title>
-	<script>document.documentElement.className += " js";</script>
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico" type="image/vnd.microsoft.icon" />
-	<link href='http://fonts.googleapis.com/css?family=Trocchi:400|Droid+Sans:400,700|Raleway:400,100,200,300' rel='stylesheet' type='text/css' />
-	<?php wp_head(); ?>
-	<script type="text/javascript">
-		(function($) {
-			$( document ).ready( function() {
-				$('#search_link').popover({
-					header: '#search-popover > .popover-header',
-					content: '#search-popover > .popover-content',
-					preventLeft: true,
-					preventTop: true,
-					preventRight: true
-				});
-
-				$('#tag_link').popover({
-					header: '#tag-popover > .popover-header',
-					content: '#tag-popover > .popover-content',
-					preventLeft: true,
-					preventTop: true,
-					preventRight: true
-				});
-
-				$("#hamburger").on( 'click', function() {
-					$(this).hide();
-					$("#topnavigation").fadeIn();
-					$("#topnavigation").delay( 20000 ).fadeOut();
-					$(this).delay( 20790 ).fadeIn();
-					$(".popover").delay( 20000 ).fadeOut();
-				} );
-
-				$("#wrapper").on( 'scroll', function() {
-					$(".popover").hide();
-				} );
-			} );
-		}(jQuery));
-	</script>
+<meta charset="<?php bloginfo('charset'); ?>" />
+<title><?php wp_title(); ?></title>
+<link rel="shortcut icon" href="<?php get_template_directory_uri(); ?>/img/favicon.png"  />
+<link href="https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700" rel="stylesheet" type="text/css" />
+<?php wp_head(); ?>
+<meta name="viewport" content="width=850" />
 </head>
-
-<!--[if lt IE 7]><body <?php body_class('ie7 ie6'); ?>><![endif]-->
-<!--[if IE 7]><body <?php body_class('ie7'); ?>><![endif]-->
-<!--[if gt IE 7]><body <?php body_class(); ?>><![endif]-->
-<!--[if !IE]><!--><body <?php body_class(); ?>><!-- <![endif]-->
-
+<body <?php body_class(); ?>>
 <div id="wrapper">
 <header>
+	<div id="navigationwrapper"<?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
 	<nav>
-		<a id="hamburger" href="#" title="Navigation">&#58887;</a>
-		<ul id="topnavigation">
-			<li>
-				<a href="#information">&#58895;</a>
-			</li>
-			<li>
-				<a href="#" id="tag_link">&#58884;</a>
-			</li>
-			<li>
-				<a href="#" id="search_link">&#58902;</a>
+		<a id="hamburger" title="Navigation" data-icon="&#58887;" class="enigma-icon"></a>
+		<ul id="topnavigation"><li>
+				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon"></a>
+			</li><li>
+				<a href="#" id="tag_link" data-icon="&#58884;" class="enigma-icon"></a>
+			</li><li><a href="#" id="category_link" data-icon="&#58897;" class="enigma-icon"></a>
+			</li><li>
+				<a href="#" id="search_link" data-icon="&#58902;" class="enigma-icon"></a>
 			</li>
 		</ul>
 	</nav>
-	<div class="picture-placeholder">
-
+	</div>
+	<div class="placeholder">
 		<h1>
 			<a href="<?php echo home_url(); ?>">
 				<?php bloginfo('name'); ?>
@@ -81,7 +35,7 @@
 	</div>
 	<div id="search-popover" class="popover">
 		<div class="popover-header">
-			Suche
+			<?php _e('Search', 'default'); ?>
 		</div>
 		<div class="popover-content">
 	   		<?php get_search_form(); ?>
@@ -99,6 +53,17 @@
 		   	?>
 		</div>
 	</div>
+	<div id="category-popover" class="popover">
+		<div class="popover-header">
+			<?php _e('Categories', 'default'); ?>
+		</div>
+		<div class="popover-content tag-cloud">
+		   	<?php 
+		   		wp_tag_cloud( array(
+		   			'taxonomy' => 'category'
+		   		) );
+		   	?>
+		</div>
+	</div>
 </header>
-
 <section>

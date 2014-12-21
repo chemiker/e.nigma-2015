@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@import "compass/reset";
+@import "compass/css3";
+
+// Fonts
+@include font-face( "enigma-icons", font-files("enigma.eot", "enigma.woff", "enigma.ttf", "enigma.svg", "enigma.eot?#iefix") );
+$sans: "Open Sans", "Lucida Grande", Helvetica, sans;
+$condensed: "Roboto Slab", Helvetica, sans;
+$serif: Georgia, "Times New Roman", sans-serif;
+$raleway: "Raleway", Helvetica, sans;
+$code: "Menlo", "Lucida Console", System, sans;
+$arrow: "Times New Roman", sans-serif;
+$iconfont: "enigma-icons";
+
+// Fontsize
+$textsize: 19px;
+$commentsize: 0.8em;
+$h1: 3.9em;
+$h2: 2.4em;
+$h3: 1.8em;
+$h4: 1.6em;
+$h5: 1.4em;
+$h6: 1.1em;
+
+// Dimensions
+$textwidth: 677px;
+
+// Colors
+$beige: #FAFAFA;
+$darkbeige: #494949;
+$lightgrey: #CDCDCD;
+$pagebarcolor: #AAA;
+$navigationbackground: #7C7C7C;
+$comment-list-background: lighten($darkbeige, 7);
+$post-image-headline-background: rgba( 0, 0, 0, 0.55 );
+$post-image-p-background: rgba( 0, 0, 0, 0.4 );
+
+// Symbols
+$twitter: "\e614";
+$github: "\e608";
+$adn: "\e615";
+$apple: "\e609";
+$download: "\e612";
+$rss: "\e60e";
+$comments: "\e61e";
+$calendar: "\e621";
+$category: "\e611";
+
+// Stylesheets
+@import "global";
+@import "wrapper";
+@import "header";
+@import "navigation";
+@import "blog";
+@import "comments";
+@import "form";
+@import "footer";
+@import "popover"

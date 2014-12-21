@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+@import "compass/reset";
+@import "compass/css3";
+
+// Fonts
+@include font-face( "Icomoon", font-files("enigma.eot", "enigma.woff", "enigma.ttf", "enigma.svg", "enigma.eot?#iefix") );
+$sans: "Open Sans", "Lucida Grande", Helvetica, sans;
+$condensed: "Roboto Slab", Helvetica, sans;
+$serif: Georgia, "Times New Roman", sans-serif;
+$raleway: "Raleway", Helvetica, sans;
+$code: "Menlo", "Lucida Console", System, sans;
+$iconfont: "enigma-icons";
+
+body {
+	font: 12pt/1.85 $sans;
+	color: black;
+	background-color: white;
+}
+
+a,
+a:visited {
+	color: black;
+}
+
+hr {
+	background-color: grey;
+}
+
+.hide {
+	display: none;
+}
+
+/* -------------------------------- Hide all the meta stuff */
+
+span.category,
+div#respond,
+div#information,
+ul#menu-navigation,
+ul#topnavigation,
+a#hamburger,
+div#navigationwrapper,
+aside#comments {
+	display: none;
+}
+
+/* -------------------------------- The rest */
+
+.placeholder {
+	text-align: center;
+	font-size: 0.7em;
+
+	h1 a,
+	h1 a:visited {
+		display: block;
+		font: {
+			family: $raleway;
+			size: 2.9em;
+			weight: 100;
+		}
+		text: {
+			decoration: none;
+			transform: lowercase;
+		}
+		color: #000;
+		line-height: 1.5em;
+		margin-bottom: 0.1em;
+	}
+}
+
+footer {
+	text-align: center;
+}
+
+.placeholder {
+	border-bottom: 1px solid grey;
+ 	margin-bottom: 1em;
+ 	padding-bottom: 1em;
+ }
+
+ article {
+ 	h2 {
+ 		text-align: center;
+ 		font: 2.4em/1.2 $condensed;
+ 	}
+
+ 	span.post-meta {
+ 		display: block;
+ 		text-align: center;
+ 		margin-bottom: 1.5em;
+ 		font-size: 0.65;
+ 	}
+
+ 	p,
+ 	img,
+ 	div,
+ 	blockquote {
+ 		margin: 1em 0 1em 0;
+ 	}
+ }

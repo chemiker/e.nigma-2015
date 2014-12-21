@@ -1,0 +1,119 @@
+/* -------------------------------- Footer */
+
+.category-light {
+	background-color: $beige;
+	color: $darkbeige;
+}
+
+footer {
+	background-color: $darkbeige;
+	border-top: 1px solid #444;
+	text-align: center;
+	color: #d3d3d3;
+
+	a,
+	a:visited,
+	a:visited:hover {
+		color: #d3d3d3;
+	}
+
+	.modifyme {
+		margin: 0 auto 0 auto;
+	}
+
+	.category-light {
+		top: 65px;
+	}
+
+	#information,
+	nav {
+		display: inline-block;
+		font-size: 0.8em;
+	}
+
+	a.enigma-button {
+		font-size: 1.3em;
+		margin: {
+			top: 20px;
+			left: 10px;
+			right: 10px;
+		}
+	}
+
+	nav {
+		border-top: 1px solid #FFF;
+		margin-top: 32px;
+		padding: {
+			bottom: 1em;
+			top: 50px;
+		}
+		width: 100%;
+		background-color: $beige;
+		min-height: 80px;
+
+		li {
+			display: inline-block;
+			padding: 0 10px 0 10px;
+
+			a,
+			a:visited {
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				color: $darkbeige;
+				display: inline-block;
+				padding: 5px 13px 5px 13px;
+				height: 35px;
+				line-height: 35px;
+				text: {
+					decoration: none;
+					transform: uppercase;
+				}
+			}
+
+			a:hover {
+				border-color: #a1a1a1;
+				color: #a1a1a1;
+			}
+		}
+	}
+
+	
+	#information {
+		p {
+			margin-top: 1em;
+			width: 600px;
+		}
+
+		img {
+			width: 160px;
+			@include border-radius( 90px );
+			border: 6px solid #333;
+		}
+	}
+
+	p {
+		margin-top: 2em;
+		display: block;
+	}
+
+	hr {
+		margin: 3em 0 0.5em 0;
+	}
+
+	span.copyright {
+		font-size: 0.6em;
+		opacity: 0.8;
+		color: $darkbeige;
+		text-transform: uppercase;
+
+		a {
+			text-decoration: none;
+			color: $darkbeige;
+
+			&:hover {
+				color: #333;
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -14,9 +14,9 @@
 			zindex: 100000,		// default z-index value
 			padding: 18,			// default settings.padding around popover from document edges
 			closeOnEsc: true, // change to false to disable ESC
-			preventLeft: false,		// pass true to prevent left popover
-			preventRight: false,	// pass true to prevent right popover
-			preventTop: false,		// pass true to prevent top popover
+			preventLeft: true,		// pass true to prevent left popover
+			preventRight: true,	// pass true to prevent right popover
+			preventTop: true,		// pass true to prevent top popover
 			preventBottom: false, // pass true to prevent bottom popover
 			live: false						// popover created on live selector
 		}, options || {});

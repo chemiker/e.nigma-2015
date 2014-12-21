@@ -1,0 +1,66 @@
+.popover {
+	max-width: 500px;
+	position: fixed;
+	display: none;
+	opacity: 0;
+	cursor: auto;
+	color: $beige;
+  	background-color: #FFF;
+	border-radius: 4px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-width: 0px;
+	padding: 15px;
+	font-size: 0.8em;
+	@include background-image( linear-gradient(top, #FFF, #dcdcdc) );
+}
+
+.popover.active {
+	opacity: 1;
+}
+
+.popover > .triangle {
+	position: absolute;
+	width: 0px;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid transparent;
+}
+
+.popover > .triangle.top {
+	bottom: -40px;
+	border-top: 20px solid #FFF;
+}
+
+.popover > .triangle.bottom {
+	top: -40px;
+	border-bottom: 20px solid #FFF;
+}
+
+.popover > .triangle.left {
+	right: -40px;
+	border-left: 20px solid #FFF;
+}
+
+.popover > .triangle.right {
+	left: -40px;
+	border-right: 20px solid #FFF;
+}
+
+.popover > .header {
+	margin: 0;
+	padding: 3px;
+	height: 1.25em;
+	text-align: center;
+	font: 1.5em/1.2 $sans;
+	text-transform: uppercase;
+	color: $darkbeige;
+    padding-bottom: 10px;
+}
+
+.popover > .content {
+	margin-top: 20px;
+	min-width: 15em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

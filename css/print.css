@@ -1,11 +1,156 @@
-/*!
- * print.css v1.0.0
- * http://printstylesheet.com/
- *
- * Copyright (c) 2011 David Bushell
- * Dual licensed under the BSD or MIT licenses: http://printstylesheet.com/license.txt
- 
- * Author: David Bushell
- * http://dbushell.com/
- */
-@media only print{body *{display:none!important}body:after{content:"Don't waste paper!"}}
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Icomoon";
+  src: url('../fonts/icomoon.eot?1408714166') format('embedded-opentype'), url('../fonts/icomoon.woff?1408714166') format('woff'), url('../fonts/icomoon.ttf?1408714166') format('truetype'), url('../fonts/icomoon.svg?1408714166') format('svg'), url('../fonts/icomoon.eot?&1408714166#iefix') format('embedded-opentype');
+}
+/* line 14, ../sass/print.scss */
+body {
+  font: 12pt/1.85 "Open Sans", "Lucida Grande", Helvetica, sans;
+  color: black;
+  background-color: white;
+}
+
+/* line 20, ../sass/print.scss */
+a,
+a:visited {
+  color: black;
+}
+
+/* line 25, ../sass/print.scss */
+hr {
+  background-color: grey;
+}
+
+/* line 29, ../sass/print.scss */
+.hide {
+  display: none;
+}
+
+/* -------------------------------- Hide all the meta stuff */
+/* line 35, ../sass/print.scss */
+span.category,
+div#respond,
+div#information,
+ul#menu-navigation,
+ul#topnavigation,
+a#hamburger,
+div#navigationwrapper,
+aside#comments {
+  display: none;
+}
+
+/* -------------------------------- The rest */
+/* line 48, ../sass/print.scss */
+.placeholder {
+  text-align: center;
+  font-size: 0.7em;
+}
+/* line 52, ../sass/print.scss */
+.placeholder h1 a,
+.placeholder h1 a:visited {
+  display: block;
+  font-family: "Raleway", Helvetica, sans;
+  font-size: 2.9em;
+  font-weight: 100;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #000;
+  line-height: 1.5em;
+  margin-bottom: 0.1em;
+}
+
+/* line 70, ../sass/print.scss */
+footer {
+  text-align: center;
+}
+
+/* line 74, ../sass/print.scss */
+.placeholder {
+  border-bottom: 1px solid grey;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 81, ../sass/print.scss */
+article h2 {
+  text-align: center;
+  font: 2.4em/1.2 "Open Sans Condensed", Helvetica, sans;
+}
+/* line 86, ../sass/print.scss */
+article span.post-meta {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 0.65;
+}
+/* line 93, ../sass/print.scss */
+article p,
+article img,
+article div,
+article blockquote {
+  margin: 1em 0 1em 0;
+}
