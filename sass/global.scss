@@ -124,8 +124,8 @@ abbr {
 blockquote {
 	font-family: $serif;
 	quotes: "\201C" "\201D";
-	margin: 25px 0 25px 0;
-	padding: 1.8em 0.8em 0.9em 0.8em;
+	margin: 1.3em 0 1.3em 0;
+	padding: 0.8em;
 	color: $blockquotecolor;
 	font: {
 		style: italic;
@@ -137,14 +137,18 @@ blockquote {
 	}
 
 	p:first-child:before {
-		display: inline-block;
-		width: 0.45em;
+		display: inline;
+		position: relative;
+		top: 0.425em;
+		padding: {
+			right: 0.1em;
+			bottom: -1em;
+		}
 	 	color: $lightgrey;
 		content: open-quote;
 		font-size: 5em;
 		line-height: 0.1em;
-		margin-right: 0.0em;
-		vertical-align: -0.4em;
+		
 		font-style: normal;
 	}
 
