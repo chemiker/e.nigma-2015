@@ -44,16 +44,17 @@ footer {
 		border-top: 1px solid #FFF;
 		margin-top: 32px;
 		padding: {
-			bottom: 1em;
+			bottom: 3em;
 			top: 50px;
 		}
 		width: 100%;
 		background-color: $beige;
-		min-height: 80px;
+		min-height: 78px;
 
 		li {
 			display: inline-block;
 			padding: 0 10px 0 10px;
+			vertical-align: top;
 
 			a,
 			a:visited {
@@ -71,8 +72,35 @@ footer {
 			}
 
 			a:hover {
-				border-color: #a1a1a1;
-				color: #a1a1a1;
+				color: $footernavigationhover;
+			}
+
+			&.active-mouse-hover {
+				background-color: $navigationbackground;
+				@include border-top-radius( 12px );
+
+				a,
+				a:visited {
+					color: $lightgrey;
+				}
+			}
+
+			ul.sub-menu {
+				z-index: 9999;
+				display: none;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				background-color: $navigationbackground;
+
+				a,
+				a:visited {
+					color: $beige;
+
+					&:hover {
+						color: $lightgrey;
+					}
+				}
 			}
 		}
 	}
@@ -97,7 +125,7 @@ footer {
 	}
 
 	hr {
-		margin: 3em 0 0.5em 0;
+		margin: 2.9em 0 0.5em 0;
 	}
 
 	span.copyright {

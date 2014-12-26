@@ -6,12 +6,12 @@
 <link rel="shortcut icon" href="<?php get_template_directory_uri(); ?>/img/favicon.png"  />
 <link href="https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
-<meta name="viewport" content="width=850" />
+<meta name="viewport" content="width=900" />
 </head>
 <body <?php body_class(); ?>>
 <div id="wrapper">
 <header>
-	<div id="navigationwrapper"<?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
+	<div id="navigationwrapper" <?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
 	<nav>
 		<a id="hamburger" title="Navigation" data-icon="&#58887;" class="enigma-icon"></a>
 		<ul id="topnavigation"><li>

@@ -344,3 +344,41 @@ span.category {
 	font-family: $arrow;
 	margin-left: 0.3em;
 }
+
+span.post-navigation {
+	a,
+	a:visited {
+		display: block;
+		height: 150px;
+		width: 60px;
+		line-height: 130px;
+		position: fixed;
+		top: 50%;
+		font-size: 4em;
+		text: {
+			align: center;
+			decoration: none;
+		}
+		color: $beige;
+		background-color: $lightgrey;
+	}
+
+	a:visited:hover,
+	a:hover {
+		background-color: $blockquotecolor;
+	}
+
+	&.next-post a,
+	&.next-post a:visited {
+		padding-left: 15px;
+		right: 0;
+		@include border-left-radius( 75px );
+	}
+
+	&.previous-post a,
+	&.previous-post a:visited {
+		padding-right: 15px;
+		left: 0;
+		@include border-right-radius( 75px );
+	}
+}

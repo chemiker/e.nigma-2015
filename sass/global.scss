@@ -48,6 +48,11 @@
 	display: none;
 }
 
+.hidden-but-visible-for-screenreader {
+	display: inline-block;
+	text-indent: -9999px;
+}
+
 .bypostauthor {
 	display: block;
 }
