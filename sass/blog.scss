@@ -363,6 +363,13 @@ span.post-navigation {
 		background-color: $lightgrey;
 	}
 
+	@media(max-width:$textwidth+170px) {
+		a,
+		a:visited {
+			display: none;
+		}
+	}
+
 	a:visited:hover,
 	a:hover {
 		background-color: $blockquotecolor;

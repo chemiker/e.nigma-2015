@@ -11,6 +11,13 @@
 		<?php echo $post_vars['thumbnail'] ?>
 		<?php the_content(); ?>
 	</div>
+	<?php previous_post_link( 
+		'<span class="post-navigation previous-post">%link</span>', 
+		'&laquo;<span class="hidden-but-visible-for-screenreader">%title</span>'
+	 ); ?>
+	<?php next_post_link( '<span class="post-navigation next-post">%link</span>', 
+		'&raquo;<span class="hidden-but-visible-for-screenreader">%title</span>'
+	 ); ?>
 </article>
 
 <?php get_sidebar(); ?>

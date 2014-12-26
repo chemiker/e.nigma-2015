@@ -127,9 +127,17 @@ div.comment-respond label {
 	letter-spacing: 1px;
 }
 
-div#comment_form form {
+div#comment_form form,
+div#comment_reply_form {
 	width: $textwidth;
+}
+
+div#comment_form form {
 	margin: 0 auto 1.5em auto;
+}
+
+div#comment_reply_form {
+	margin: 0px auto 0px auto;
 }
 
 p.form-allowed-tags,

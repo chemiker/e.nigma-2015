@@ -9,9 +9,11 @@
 					));
 				?>
 				<li>
+					<?php if ( get_option( 'page_comments' ) ) : ?>
 					<div class="pagebar comment">
 						<?php paginate_comments_links(); ?>
 					</div>
+					<?php endif; ?>
 				</li>
 			</ol>
 		</div>

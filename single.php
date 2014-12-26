@@ -53,9 +53,11 @@
 	if ( comments_open() ) : ?>
 		<div id="comment_form">
 			<span class="category enigma-icon" data-icon="&#58892;"></span>
+			<div id="comment_reply_form">
 			<?php 
 				comment_form();
 			?>
+			</div>
 		</div>
 <?php endif; ?>
 
