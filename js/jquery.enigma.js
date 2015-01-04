@@ -32,7 +32,7 @@
 	} );
 
 	function handle_submenus() {
-		$("#menu-navigation>li").each( function () {
+		$(".menu>li").each( function () {
 			$(this).on( 'mouseenter', function () {
 				if ( $(this).children('ul.sub-menu').length > 0 )
 					$(this).addClass('active-mouse-hover');
@@ -42,7 +42,7 @@
 			} );
 		} );
 
-		$("#menu-navigation li").each( function () {
+		$(".menu li").each( function () {
 			$(this).on( 'mouseenter', function () {
 				$(this).children('ul.sub-menu').show();
 			} );
