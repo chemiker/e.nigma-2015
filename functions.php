@@ -3,6 +3,7 @@
 require 'functions/content.php';
 require 'functions/helper.php';
 require 'functions/widgets.php';
+require 'functions/customizer.php';
 
 // Add support for Post formats
 add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery' ) );
@@ -25,8 +26,11 @@ register_nav_menus( array(
 	'main_menu' => __( 'Main Menu', 'enigma' )
 ) );
 
+// Add actions for customizer
+add_action('customize_register', '\enigma\Customizer::register');
+
 // Register Widget area(s)
-add_action( 'init', '\enigma\Widgets::widgets_init' );
+add_action( 'widgets_init', '\enigma\Widgets::widgets_init' );
 
 // Register comment-reply
 add_action( 'comment_form_before', function () {

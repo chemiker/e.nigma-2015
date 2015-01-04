@@ -22,7 +22,7 @@ footer {
 	}
 
 	.category-light {
-		top: 65px;
+		top: -85px;
 	}
 
 	#information,
@@ -50,6 +50,7 @@ footer {
 		width: 100%;
 		background-color: $beige;
 		min-height: 78px;
+		clear: both;
 
 		li {
 			display: inline-block;
@@ -114,6 +115,7 @@ footer {
 
 		img {
 			width: 160px;
+			height: 160px;
 			@include border-radius( 90px );
 			border: 6px solid #333;
 		}
@@ -141,6 +143,54 @@ footer {
 			&:hover {
 				color: #333;
 				text-decoration: underline;
+			}
+		}
+	}
+}
+
+aside#sidebar {
+	margin: 2em auto 0 auto;
+	width: 850px;
+	
+	ul {
+		li {
+			display: inline-block;
+			width: 30%;
+			padding: 0 1% 0 1%;
+			color: $beige;
+			font-size: 0.8em;
+			vertical-align: top;
+
+			a,
+			a:visited {
+				color: $beige;
+			}
+			
+			h2 {
+				border: {
+					top: 1px solid $navigationbackground;
+					bottom: 1px solid $navigationbackground;
+				}
+				margin-bottom: 2em;
+			}
+
+			li {
+				float: none;
+				width: 100%;
+				text-align: left;
+			}
+
+			table {
+				width: 100%;
+
+				td, th {
+					text-align: center;
+				}
+
+				td#today {
+					background-color: $beige;
+					color: $darkbeige;
+				}
 			}
 		}
 	}
