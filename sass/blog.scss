@@ -151,8 +151,8 @@ article {
 	table {
 		font-size: 0.8em;
 		border: {
-			top: 2px solid $darkbeige;
-			bottom: 2px solid $darkbeige;
+			top: 2px solid $darkbeige !important;
+			bottom: 2px solid $darkbeige !important;
 		}
 		margin: 1.5em auto 1.5em auto;
 		padding: 0px;
