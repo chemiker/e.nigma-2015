@@ -86,7 +86,8 @@ footer {
 				}
 			}
 
-			ul.sub-menu {
+			ul.sub-menu,
+			ul.children {
 				z-index: 9999;
 				display: none;
 				position: absolute;

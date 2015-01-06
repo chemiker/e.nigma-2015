@@ -32,9 +32,9 @@
 	} );
 
 	function handle_submenus() {
-		$(".menu>li").each( function () {
+		$(".menu>li, div.menu>ul>li").each( function () {
 			$(this).on( 'mouseenter', function () {
-				if ( $(this).children('ul.sub-menu').length > 0 )
+				if ( $(this).children('ul.sub-menu, ul.children').length > 0 )
 					$(this).addClass('active-mouse-hover');
 			} );
 			$(this).on( 'mouseleave', function () {
@@ -42,12 +42,12 @@
 			} );
 		} );
 
-		$(".menu li").each( function () {
+		$(".menu li, .page_item li").each( function () {
 			$(this).on( 'mouseenter', function () {
-				$(this).children('ul.sub-menu').show();
+				$(this).children('ul.sub-menu, ul.children').show();
 			} );
 			$(this).on( 'mouseleave', function () {				
-				$(this).children('ul.sub-menu').hide();
+				$(this).children('ul.sub-menu, ul.children').hide();
 			} );
 		} );
 	}
