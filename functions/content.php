@@ -76,7 +76,7 @@
 					'gallery' => '&#58904;'
 				);
 
-			if ( ! $format || ! $symbols[$format] )
+			if ( ! $format || ! isset($symbols[$format]) || ! $symbols[$format] )
 				return '&#58896;';
 
 			return $symbols[$format];
@@ -102,10 +102,18 @@
 					$meta = '';
 				break;
 				case 'image' :
-					$meta = '<span class="hidden">'.__('Published on:').' </span><span class="post-meta-date">' . get_the_date() .'</span>'. self::get_categories();
+					$meta = '<span class="hidden">'
+						. __('Published on:', 'default')
+						. ' </span><span class="post-meta-date">'
+						. get_the_date() .'</a></span>'
+						. self::get_categories();
 				break;
 				default :
-					$meta = '<hr class="before_content" /><span class="hidden">'.__('Published on:').' </span><span class="post-meta-date">' . get_the_date() .'</span>'. self::get_categories();
+					$meta = '<hr class="before_content" /><span class="hidden">'
+						. __('Published on:', 'default').' </span><span class="post-meta-date"><a href="'
+						. get_the_permalink().'">'
+						. get_the_date() .'</a></span>'
+						. self::get_categories();
 				break;
 			}
 
@@ -126,7 +134,12 @@
 		}
 
 		private static function get_content($format) {
-			$content = get_the_content();
+			if ( is_archive() && has_excerpt() ) {
+				$content = get_the_excerpt();
+			} else {
+				$content = get_the_content();
+			}
+				
 			$oembed = wp_oembed_get( 
 						get_post_meta( get_the_ID(), '_format_'.$format.'_embed', true ),
 						array( 'width' => 677 )
@@ -141,10 +154,17 @@
 			return $content;
 		}
 
+		private static function get_class($format, $class='') {
+			if ( $format == 'image' && has_post_thumbnail() )
+				$class = "image-post-with-thumbnail";
+
+			return $class;
+		}
+
 		private static function get_css($format, $css='') {
 			if ( $format == 'image' && $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) )
 				$css = "style=\"background-image: url('".$featured_image[0]."')\"";
-
+			
 			return $css;
 		}
 
@@ -156,6 +176,7 @@
 					'meta' => self::get_meta($format),
 					'thumbnail' => self::get_thumbnail($format),
 					'css' => self::get_css($format),
+					'class' => self::get_class($format),
 					'content' => self::get_content($format)
 				);
 		}

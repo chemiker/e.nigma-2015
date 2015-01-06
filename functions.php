@@ -14,6 +14,9 @@ add_theme_support('automatic-feed-links');
 // Article image support. http://codex.wordpress.org/Post_Thumbnails
 add_theme_support('post-thumbnails');
 
+// Support Title-tag
+add_theme_support( "title-tag" );
+
 // Set maximum article width to 677px
 if ( ! isset( $content_width ) )
 	$content_width = 584;

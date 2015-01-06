@@ -32,6 +32,93 @@ ol.commentlist {
 				width: 85%;
 			}
 		}
+
+		div.comment-body {
+			@each $level, $fontsize, $margintop in $headings {
+				#{$level} a,
+				#{$level} a:visited {
+					text-decoration: none;
+					color: #333;
+				}
+
+				#{$level} {
+					text: {
+						align: center;
+					}
+					font: #{$fontsize}/1.4 $condensed {
+					}
+					margin-top: #{$margintop};
+				}
+
+			}
+
+			var {
+				color: $beige;
+			}
+
+			code,
+			kbd {
+				background-color: #E7E7E7;
+				padding: 5px;
+			}
+
+			& > ul,
+			& > dl,
+			& > dd,
+			& > ol {
+				margin: 1em 0 1em 0;
+			}
+
+			ul,
+			dl,
+			dd {
+				list-style-type: circle;
+			}
+
+			ol {
+				list-style-type: decimal;
+			}
+
+			p {
+				margin: 1em 0 1em 0;
+			}
+
+			blockquote {
+				color: $beige;
+			}
+
+			table {
+				font-size: 0.8em;
+				border: {
+					top: 2px solid $navigationbackground;
+					bottom: 2px solid $navigationbackground;
+				}
+				margin: 1.5em auto 1.5em auto;
+				padding: 0px;
+				width: 100%;
+			}
+
+			thead {
+				th {
+					background: none !important;
+					border-bottom: 1px solid $navigationbackground !important;
+				}
+			}
+
+			tr {
+				margin: 0px;
+
+				th, td {
+					padding: 3px;
+				}	
+
+				td {
+					border: none !important;
+					margin: 0px;
+					line-height: 1.3em !important;
+				}
+			}
+		}
 	}
 
 	div.comment-meta {
@@ -110,6 +197,12 @@ ol.commentlist {
 	}
 }
 
+p.form-allowed-tags {
+	code {
+		white-space: normal;
+	}
+}
+
 div.comment-body {
 	padding: 1.1em 2em 1.5em 2em;
 	border-bottom: 10px solid $comment-list-background;
@@ -118,13 +211,13 @@ div.comment-body {
 div.comment-respond {
 	margin-top: -1.3em;
 	font-size: $commentsize;
-}
 
-div.comment-respond label {
-	display: block;
-	font-family: $condensed;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	label {
+		display: block;
+		font-family: $condensed;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
 }
 
 div#comment_form form,

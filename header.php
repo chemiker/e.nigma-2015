@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo('charset'); ?>" />
-<title><?php wp_title(); ?></title>
 <link href="https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
 <meta name="viewport" content="width=900" />

@@ -1,7 +1,7 @@
 <?php if ( have_comments() ) : ?>
 	<aside id="comments">
+		<span class="category comment-category enigma-icon" data-icon="&#58905;"></span>
 		<div class="modifyme">
-			<span class="category comment-category enigma-icon" data-icon="&#58905;"></span>
 			<ol class="commentlist">
 				<?php
 					wp_list_comments(array(

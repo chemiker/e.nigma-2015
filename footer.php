@@ -1,7 +1,7 @@
 </section>
 <footer>
+	<span class="category enigma-icon" data-icon="&#58895;"></span>
 	<div class="modifyme">
-		<span class="category enigma-icon" data-icon="&#58895;"></span>
 		<div id="information">
 			<img src="<?php echo get_theme_mod('enigma_2015_information_image', get_template_directory_uri().'/screenshot.png'); ?>"
 				alt="<?php echo bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />

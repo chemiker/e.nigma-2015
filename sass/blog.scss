@@ -18,27 +18,48 @@ article {
 		text-align: center;
 	}
 
-	&.format-image,
-	&.format-gallery {
-		box-shadow: inset 0px 0px 30px $darkbeige;
-		background-color: $darkbeige;
-	}
-
-	&.format-image {
+	&.format-image.image-post-with-thumbnail {
 		min-height: 400px;
 		@include background-size( cover );
 		background-position: center center;
+		box-shadow: inset 0px 0px 30px $darkbeige;
+
+		.post-meta {
+			color: $beige;
+			@include text-shadow($darkbeige 0px 0px 12px, $darkbeige 0px 0px 12px);
+
+			a,
+			a:visited {
+				color: $beige;
+			}
+		}	
 	}
 
 	&.format-gallery {
+		a,
+		a:visited {
+			color: $beige;
+		}
+
+		color: $beige;
+		background-color: $navigationbackground;
+	}
+
+	&.format-gallery,
+	&.image-post-with-thumbnail {
 		h2 {
 			a,
 			a:visited {
-				color: #FFF;
+				display: inline-block;
+				color: $beige;
+				background-color: $post-image-headline-background;
+				@include border-radius( 5px );
+				padding: 10px 15px 10px 15px;
+
 			}
 
 			a:hover {
-				color: $lightgrey;
+				background-color: $darkbeige;
 			}
 		}
 	}
@@ -81,11 +102,17 @@ article {
 		border: none;
 	}
 
+	div.video-player,
+	embed,
+	object {
+		display: block;
+		margin: 1em auto 1em auto;
+	}
+
 	img {
-		max-width: 100%;
 		@include border-radius( 5px );
 		margin: {
-			top: 0.5em;
+			top: 1em;
 			bottom: -0.7em;
 		}
 
@@ -94,45 +121,27 @@ article {
 		}
 	}
 
-	pre {
-		white-space: pre;
-		@include border-radius( 5px );
-		margin: 1.5em 0 0 0;
-
-		code {
-			padding: 8px 5px 8px 5px;
-			line-height: 0.8em;
-			font-size: 0.8em;
-		}
-	}	
-
-	code {
-		white-space: pre;
-		font-family: $code;
-		overflow: auto;
-		display: block;
-		background-color: #E7E7E7;
-		color: $darkbeige;
-		padding: 5px;
-	}
-
 	li {
 		font-size: 0.95em;
 		opacity: 0.85;
+		margin-left: 1em;
 	}
 
-	ul {
+	& > div.modifyme > ul,
+	& > div.modifyme > dl,
+	& > div.modifyme > dd,
+	& > div.modifyme > ol {
+		margin: 1em 0 1em 0;
+	}
+
+	ul,
+	dl,
+	dd {
 		list-style-type: circle;
 	}
 
 	ol {
 		list-style-type: decimal;
-	}
-
-	dl {
-		display: inline;
-		float: right;
-		width: 100px;
 	}
 
 	sup {
@@ -141,11 +150,14 @@ article {
 
 	table {
 		font-size: 0.8em;
-		border-bottom: 2px solid $darkbeige;
+		border: {
+			top: 2px solid $darkbeige;
+			bottom: 2px solid $darkbeige;
+		}
 		margin: 1.5em auto 1.5em auto;
 		padding: 0px;
 		height: auto;
-		width: 80%;
+		width: 90%;
 
 		&.tablepress {
 			border-bottom: 2px solid $darkbeige !important;
@@ -159,16 +171,19 @@ article {
 		border-bottom: none;
 	}
 
+	thead {
+		th {
+			background: none !important;
+			border-bottom: 1px solid $darkbeige !important;
+		}
+	}
+
 	tr {
 		margin: 0px;
 
-		th {
-			background: none !important;
-			border: {
-				top: 2px solid $darkbeige !important;
-				bottom: 1px solid $darkbeige !important;
-			}
-		}
+		th, td {
+			padding: 3px;
+		}	
 
 		td {
 			border: none !important;
@@ -198,7 +213,10 @@ article {
 		}
 
 		&-date {
-			cursor: help;
+			a,
+			a:visited {
+				text-decoration: none;
+			}
 		}
 
 		$metasymbols: (
@@ -215,42 +233,6 @@ article {
 			}
 		}
 	}
-
-	&.format-image {
-		h2 {
-			a,
-			a:visited {
-				color: $beige;
-				background-color: $post-image-headline-background;
-				@include border-radius( 5px );
-				padding: 10px 15px 10px 15px;
-
-			}
-
-			a:hover {
-				background-color: $darkbeige;
-			}
-		}
-
-		.post-meta {
-			color: $beige;
-			@include text-shadow($darkbeige 0px 0px 12px, $darkbeige 0px 0px 12px);
-
-			a,
-			a:visited {
-				color: $beige;
-			}
-		}
-	}
-
-	$headings: (
-		("h2", $h2, 0),
-		("h3", $h3, 1em),
-		("h3.comment-reply-title", $h3, 0),
-		("h4", $h4, 1em),
-		("h5", $h5, 1em),
-		("h6", $h6, 1em),
-	);
 
 	@each $level, $fontsize, $margintop in $headings {
 		#{$level} a,
@@ -277,6 +259,10 @@ article {
 	div.single-page h2 {
 		font-size: 3em;
 	}
+}
+
+div.modifyme {
+	overflow: hidden;
 }
 
 ol.footnotes {
