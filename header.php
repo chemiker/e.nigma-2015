@@ -12,7 +12,7 @@
 <div id="wrapper">
 <header role="banner">
 	<div id="navigationwrapper" <?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
-	<nav role="complementary">
+	<nav>
 		<a id="hamburger" tabindex="0" data-icon="&#58887;" class="enigma-icon"><span class="screen-reader"><?php _e('Navigation', 'enigma-2015'); ?></span></a>
 		<ul id="topnavigation"><li>
 				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon"></a>

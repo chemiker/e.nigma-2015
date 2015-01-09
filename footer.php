@@ -1,5 +1,5 @@
 </section>
-<footer role="content-info">
+<footer>
 	<span class="category enigma-icon" data-icon="&#58895;"></span>
 	<div class="modifyme">
 		<div id="information">
