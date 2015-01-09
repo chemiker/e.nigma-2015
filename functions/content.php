@@ -68,7 +68,7 @@
 			}
 
 			if ( ! empty($categories) ) {
-				$categories = sprintf('<span class="screen-reader">%s: </span><span class="post-meta-category">%s</span>',
+				$categories = sprintf('<span class="screen-reader hidden">%s: </span><span class="post-meta-category">%s</span>',
 						__('Category', 'enigma-2015'),
 						$categories
 					);
@@ -116,7 +116,7 @@
 					$meta = '';
 				break;
 				default :
-					$meta = sprintf('<hr class="before_content" /><span class="screen-reader">%s</span><span class="post-meta-date"><a href="%s">%s</a></span>%s',
+					$meta = sprintf('<hr class="before_content" /><span class="screen-reader hidden">%s</span><span class="post-meta-date"><a href="%s">%s</a></span>%s',
 							 __('Published on:', 'enigma-2015'),
 							 get_the_permalink(),
 							 get_the_date(),
@@ -148,7 +148,7 @@
 			return get_the_content(
 						sprintf(
 								__( 'Continue reading%s', 'enigma-2015' ), 
-								'<span class="screen-reader">  '.get_the_title().'</span>&hellip;' 
+								'<span class="screen-reader hidden">  '.get_the_title().'</span>&hellip;' 
 							)
 					);
 		}
