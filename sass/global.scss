@@ -15,10 +15,10 @@
 	margin: 0 0 15px 15px;
 }
 
-.wp-caption {
-}
+.wp-caption {}
 
-.wp-caption img {
+.gallery-caption {
+	color: $blockquotecolor;
 }
 
 .wp-caption-text {
@@ -31,7 +31,6 @@
 }
 
 .gallery {
-	text-align: center;
 	margin: 1em 0 2.8em 0 !important;
 
 	img {
@@ -45,10 +44,11 @@
 }
 
 .hidden {
-	display: none;
+	text-indent: -9999px;
+	position: absolute;
 }
 
-.hidden-but-visible-for-screenreader {
+.screen-reader {
 	display: inline-block;
 	text-indent: -9999px;
 }
@@ -57,9 +57,7 @@
 	display: block;
 }
 
-.gallery-caption {
-	display: none;
-}
+.gallery-caption {}
 
 .enigma-icon[data-icon]:before {
 	content: attr(data-icon);
@@ -88,6 +86,22 @@
 a,
 a:visited {
 	color: #333;
+
+	&.screen-reader {
+		position: absolute;
+
+		&:focus {
+			position: static;
+			display: block;
+			background-color: $lightgrey;
+			color: $darkbeige;
+			padding: 70px 0px 20px 0px;
+			text: {
+				align: center;
+				indent: 0px;
+			}
+		}
+	}
 }
 
 a:hover {

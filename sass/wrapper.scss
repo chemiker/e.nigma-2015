@@ -2,12 +2,18 @@
 
 body {
 	font: #{$textsize}/1.85 $sans;
-	color: $darkbeige;
 	background-color: $darkbeige;
+	color: $beige;
+
+	&>a.screen-reader,
+	&>a.screen-reader:visited {
+		color: $beige
+	}
 }
 
 #wrapper {
 	background-color: $beige;
+	color: $darkbeige;
 }
 
 header nav ul,

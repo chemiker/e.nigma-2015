@@ -39,7 +39,11 @@
 
 		    if (! empty($min) && ! empty($max)) {
 		        for ($i = $min; $i <= $max; $i++) {
-		            echo sprintf(' <a href="%s" %s>%d</a>', get_pagenum_link($i), ($i == $page ? 'class="page active"' : 'class="page"'), $i);
+		            echo sprintf(' <a href="%s" %s>%d</a>',
+		            		get_pagenum_link($i),
+		            		($i == $page ? 'class="page active"' : 'class="page"'),
+		            		$i
+		            	);
 		        }
 		    }
 		}
@@ -56,11 +60,18 @@
 				} else {
 					$spacer = ', ';
 				}
-				$categories .= '<a href="' . get_category_link( $category->term_id ) . '">' .$category->name . '</a>' . $spacer;
+				$categories .= sprintf('<a href="%s">%s</a>%s',
+						get_category_link( $category->term_id ),
+						$category->name,
+						$spacer
+					);
 			}
 
 			if ( ! empty($categories) ) {
-				$categories = '<span class="hidden">'.__('Category').': </span><span class="post-meta-category">' . $categories . '</span>';
+				$categories = sprintf('<span class="screen-reader">%s: </span><span class="post-meta-category">%s</span>',
+						__('Category', 'enigma-2015'),
+						$categories
+					);
 				return $categories;
 			}
 		}
@@ -86,7 +97,10 @@
 			switch ($format) {
 				case 'link' :
 					$link = get_post_meta( get_the_ID(), '_format_link_url', true );
-					$headline = '<h2><a href="' . ( $link ? $link : get_the_permalink() ) . '">' . get_the_title() . '<span class="link_arrow">&#x2192;</span></a></h2>';
+					$headline = sprintf('<h2><a href="%s">%s<span class="link_arrow">&#x2192;</span></a></h2>',
+							( $link ? $link : get_the_permalink() ),
+							get_the_title()
+						);
 				break;
 				default :
 					$headline = '<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
@@ -101,19 +115,13 @@
 				case 'quote' : case 'link' :
 					$meta = '';
 				break;
-				case 'image' :
-					$meta = '<span class="hidden">'
-						. __('Published on:', 'default')
-						. ' </span><span class="post-meta-date">'
-						. get_the_date() .'</a></span>'
-						. self::get_categories();
-				break;
 				default :
-					$meta = '<hr class="before_content" /><span class="hidden">'
-						. __('Published on:', 'default').' </span><span class="post-meta-date"><a href="'
-						. get_the_permalink().'">'
-						. get_the_date() .'</a></span>'
-						. self::get_categories();
+					$meta = sprintf('<hr class="before_content" /><span class="screen-reader">%s</span><span class="post-meta-date"><a href="%s">%s</a></span>%s',
+							 __('Published on:', 'enigma-2015'),
+							 get_the_permalink(),
+							 get_the_date(),
+							 self::get_categories()
+						);
 				break;
 			}
 
@@ -133,12 +141,20 @@
 			return $thumbnail;
 		}
 
+		private static function get_text_for_archive_page() {
+			if ( ! is_single() && has_excerpt() )
+				return get_the_excerpt();
+
+			return get_the_content(
+						sprintf(
+								__( 'Continue reading%s', 'enigma-2015' ), 
+								'<span class="screen-reader">  '.get_the_title().'</span>&hellip;' 
+							)
+					);
+		}
+
 		private static function get_content($format) {
-			if ( is_archive() && has_excerpt() ) {
-				$content = get_the_excerpt();
-			} else {
-				$content = get_the_content();
-			}
+			$content = self::get_text_for_archive_page();
 				
 			$oembed = wp_oembed_get( 
 						get_post_meta( get_the_ID(), '_format_'.$format.'_embed', true ),
@@ -180,14 +196,4 @@
 					'content' => self::get_content($format)
 				);
 		}
-
-		// Customize "read-more button"
-		// We remove those uggly brackets here!
-		public static function remove_more_link_scroll( $link ) {
-			$link = str_replace('(', '', $link);
-			$link = str_replace(')', '', $link);
-			$link = str_replace("&#160;&hellip;", '&hellip;', $link);
-			return $link;
-		}
-
 	}

@@ -20,8 +20,8 @@
 		    wp_link_pages(array(
 		        'before' =>  '',
 		        'after' => '',
-		        'nextpagelink' => __('Next Page &raquo;', 'default'),
-		        'previouspagelink' => __('&laquo; Previous Page', 'default'),
+		        'nextpagelink' => __('Next Page &raquo;', 'enigma-2015'),
+		        'previouspagelink' => __('&laquo; Previous Page', 'enigma-2015'),
 		        'next_or_number' => 'next_and_number',
 		        'pagelink' => '%',
 		        'echo' => 1 )
@@ -39,10 +39,10 @@
 		</div>
 		<?php previous_post_link( 
 			'<span class="post-navigation previous-post">%link</span>', 
-			'&laquo;<span class="hidden-but-visible-for-screenreader">%title</span>'
+			'&laquo;<span class="screen-reader">%title</span>'
 		 ); ?>
 		<?php next_post_link( '<span class="post-navigation next-post">%link</span>', 
-			'&raquo;<span class="hidden-but-visible-for-screenreader">%title</span>'
+			'&raquo;<span class="screen-reader">%title</span>'
 		 ); ?>
 	</div>
 </article>

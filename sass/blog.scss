@@ -35,17 +35,6 @@ article {
 		}	
 	}
 
-	&.format-gallery {
-		a,
-		a:visited {
-			color: $beige;
-		}
-
-		color: $beige;
-		background-color: $navigationbackground;
-	}
-
-	&.format-gallery,
 	&.image-post-with-thumbnail {
 		h2 {
 			a,
@@ -296,13 +285,13 @@ a.more-link:visited {
 	border-color: $beige;
 	color: $beige;
 	margin: 3em auto 0 auto;
-	display: block;
-	width: 156px;
 	text: {
 		align: center;
 		transform: capitalize;
 		decoration: none;
 	}
+	display: block;
+	width: 30%;
 }
 
 a.more-link:hover {

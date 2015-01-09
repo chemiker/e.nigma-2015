@@ -26,7 +26,7 @@ remove_action('wp_head', 'wp_generator');
 
 // Register Menu location(s)
 register_nav_menus( array(
-	'main_menu' => __( 'Main Menu', 'enigma' )
+	'main_menu' => __( 'Main Menu', 'enigma-2015' )
 ) );
 
 // Add actions for customizer
@@ -40,6 +40,11 @@ add_action( 'comment_form_before', function () {
 	wp_enqueue_script( 'comment-reply' );
 });
 
+// Add localization
+add_action('init', function () {
+	load_theme_textdomain('enigma-2015', '/' . dirname( plugin_basename( __FILE__ ) ) . '/languages');
+});
+
 // Fix invalid Video containers
 add_filter('oembed_dataparse', function ( $return, $data, $url ) {
 	return str_replace(' frameborder="0"', '', $return);
@@ -47,9 +52,6 @@ add_filter('oembed_dataparse', function ( $return, $data, $url ) {
 
 // Add next and number option to wp_link_pages()
 add_filter('wp_link_pages_args','\enigma\Helper::add_next_and_number');
-
-// Remove brackets from "more" link
-add_filter( 'the_content_more_link', '\enigma\Content::remove_more_link_scroll' );
 
 // Add page class to Post pages
 add_filter('wp_link_pages_link', function ($link) {

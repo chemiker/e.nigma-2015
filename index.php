@@ -25,7 +25,7 @@
 	<article <?php post_class(); ?>  <?php echo $post_vars['css'] ?>>
 		<div class="modifyme">
 			<span class="category" data-icon="?"></span>
-			<h2><?php _e('Couldn\'t find any articles!'); ?></h2>
+			<h2><?php _e('Couldn\'t find any articles!', 'enigma'); ?></h2>
 		</div>
 	</article>
 <?php endif; ?>
@@ -34,11 +34,10 @@
 	global $wp_query;
 	
 	if ( $wp_query->max_num_pages > 1 ) :
-		?> <span class="category pagebar-category enigma-icon" data-icon="&#58914;"></span><div class="pagebar"> <?php 
-		previous_posts_link(); 
-		\enigma\Content::Pagebar();
-		next_posts_link();
-		?> </div> <?php
+		?>
+		<span class="category pagebar-category enigma-icon" data-icon="&#58914;"></span><div class="pagebar">
+		<?php previous_posts_link(); \enigma\Content::Pagebar(); next_posts_link();	?> </div>
+		<?php
 	endif;
 ?>
 

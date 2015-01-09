@@ -18,7 +18,8 @@ header {
 		height: 15px;
 
 		a,
-		a:visited {
+		a:visited,
+		a:hover {
 			color: $beige;
 			text-decoration: none;
 			display: block;

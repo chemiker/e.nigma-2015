@@ -7,11 +7,13 @@
 <meta name="viewport" content="width=900" />
 </head>
 <body <?php body_class(); ?>>
+<a href="#primary_content" class="screen-reader"><?php _e('Skip to content', 'enigma-2015'); ?></a>
+<a href="#primary_navigation" class="screen-reader"><?php _e('Skip to Navigation', 'enigma-2015'); ?></a>
 <div id="wrapper">
-<header>
+<header role="banner">
 	<div id="navigationwrapper" <?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
-	<nav>
-		<a id="hamburger" title="Navigation" data-icon="&#58887;" class="enigma-icon"></a>
+	<nav role="complementary">
+		<a id="hamburger" tabindex="0" data-icon="&#58887;" class="enigma-icon"><span class="screen-reader"><?php _e('Navigation', 'enigma-2015'); ?></span></a>
 		<ul id="topnavigation"><li>
 				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon"></a>
 			</li><li>
@@ -31,9 +33,9 @@
 		</h1>
 		<span class="description"><?php bloginfo('description'); ?></span>
 	</div>
-	<div id="search-popover" class="popover">
+	<div id="search-popover" class="popover" role="search">
 		<div class="popover-header">
-			<?php _e('Search', 'default'); ?>
+			<label for="s"><?php _e('Search', 'enigma-2015'); ?></label>
 		</div>
 		<div class="popover-content">
 	   		<?php get_search_form(); ?>
@@ -53,7 +55,7 @@
 	</div>
 	<div id="category-popover" class="popover">
 		<div class="popover-header">
-			<?php _e('Categories', 'default'); ?>
+			<?php _e('Categories', 'enigma-2015'); ?>
 		</div>
 		<div class="popover-content tag-cloud">
 		   	<?php 
@@ -64,4 +66,5 @@
 		</div>
 	</div>
 </header>
-<section>
+<section id="primary_content" role="main">
+<h2 class="screen-reader hidden"><?php _e('Content', 'enigma-2015'); ?></h2>
