@@ -2,13 +2,13 @@
 Theme Name: e.nigma 2015
 Description: e.nigma 2015 is a light-weight, modern and simple WordPress theme. It is thought to be used with WordPress posts formats.
 Author: Alexander Lüken
-Version: 1.0.7
+Version: 1.0.8
 Theme URI: http://e.nigma.de/portfolio/enigma2015
 Author URI: http://e.nigma.de
 License: MIT
 License URI: license.txt
 Text Domain: enigma-2015
-Tags: one-column, microformats, post-formats, featured-images, custom-menu, translation-ready, sticky-post, accessibility-ready, full-width-template, theme-options, threaded-comments, fluid-layout
+Tags: one-column, microformats, post-formats, featured-images, custom-menu, translation-ready, sticky-post, accessibility-ready, full-width-template, theme-options, threaded-comments, fluid-layout, rtl-language-support
 */
 
 @import url('css/screen.css') screen;

@@ -97,9 +97,10 @@
 			switch ($format) {
 				case 'link' :
 					$link = get_post_meta( get_the_ID(), '_format_link_url', true );
-					$headline = sprintf('<h2><a href="%s">%s<span class="link_arrow">&#x2192;</span></a></h2>',
+					$headline = sprintf('<h2><a href="%s">%s<span class="link_arrow">%s</span></a></h2>',
 							( $link ? $link : get_the_permalink() ),
-							get_the_title()
+							get_the_title(),
+							( is_rtl() ? '&#x2190;' : '&#x2192;' )
 						);
 				break;
 				default :

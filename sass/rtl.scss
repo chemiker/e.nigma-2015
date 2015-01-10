@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+@import "compass/css3";
+@import "settings";
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.alignleft {
+	float: right;
+	margin: 0px 0px 15px 15px;
+}
+
+.alignright {
+	float: left;
+	margin: 0px 15px 15px 0px;
+}
+
+.link-arrow {
+	margin: {
+		left: 0px;
+		right: 0.3em;
+	}
+}
+
+article {
+	li {
+		margin: {
+			left: 0px;
+			right: 1em;
+		}
+	}
+
+	.post-meta {
+		&-date,
+		&-category,
+		&-comments {
+			margin: {
+				left: 1em;
+				right: 0px;
+			}
+		}
+
+		$metasymbols: (
+			date: $calendar,
+			category: $category,
+			comments: $comments
+		);
+
+		@each $name, $icon in $metasymbols {
+			&-#{$name}:before {
+				display: none;
+			}
+			&-#{$name}:after {
+				padding-left: 0.5em;
+				font-family: $iconfont;
+				content: $icon;
+			}
+		}
+	}
+}
+
+span.post-navigation {
+	&.next-post a,
+	&.next-post a:visited {
+		padding-right: 15px;
+		@include border-right-radius( 0px );
+		@include border-left-radius( 75px );
+	}
+
+	&.previous-post a,
+	&.previous-post a:visited {
+		padding-left: 15px;
+		@include border-left-radius( 0px );
+		@include border-right-radius( 75px );
+	}
+}
+
+#search_link {
+	@include border-bottom-right-radius( 0px );
+	@include border-bottom-left-radius( 35px );
+	padding: {
+		right: 0px;
+		left: 10px;
+	}
+	margin: {
+		right: -1px;
+		left: 0px;
+	}
+}
+
+#information_link {
+	@include border-bottom-left-radius( 0px );
+	@include border-bottom-right-radius( 35px );
+	padding: {
+		left: 10px;
+		right: 0px;
+	}
+	margin: {
+		left: -1px;
+		right: 0px;
+	}
+}
+
+ol.commentlist {
+	ul.children {
+		border: {
+			right: 10px solid $comment-list-background;
+			left: 10px solid $darkbeige;
+		}
+	}
+}

@@ -16,6 +16,7 @@ div#comment_form {
 article {
 	&.attachment {
 		text-align: center;
+		overflow: hidden;
 	}
 
 	&.format-image.image-post-with-thumbnail {
