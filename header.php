@@ -15,7 +15,7 @@
 	<nav>
 		<a id="hamburger" tabindex="0" data-icon="&#58887;" class="enigma-icon"><span class="screen-reader"><?php _e('Navigation', 'enigma-2015'); ?></span></a>
 		<ul id="topnavigation"><li>
-				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon popover-link"><span class="screen-reader hidden"><?php _e('Information', 'enigma-2015'); ?></span></a>
+				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon"><span class="screen-reader hidden"><?php _e('Information', 'enigma-2015'); ?></span></a>
 			</li><li>
 				<a href="#" id="tag_link" data-icon="&#58884;" class="enigma-icon popover-link"><span class="screen-reader hidden"><?php _e('Tags', 'enigma-2015'); ?></span></a>
 			</li><li><a href="#" id="category_link" data-icon="&#58897;" class="enigma-icon popover-link"><span class="screen-reader hidden"><?php _e('Category', 'enigma-2015'); ?></span></a>
