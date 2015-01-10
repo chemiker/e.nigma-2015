@@ -40,6 +40,11 @@ add_action( 'comment_form_before', function () {
 	wp_enqueue_script( 'comment-reply' );
 });
 
+// Add a wrapper for the "Read more" link
+add_action( 'the_content_more_link', function ($link) {
+	return "<div class='center'>" . $link . "</div>";
+}, 10, 2 );
+
 // Add localization
 add_action('init', function () {
 	load_theme_textdomain('enigma-2015', '/' . dirname( plugin_basename( __FILE__ ) ) . '/languages');
@@ -64,7 +69,7 @@ add_filter('wp_link_pages_link', function ($link) {
 // Register Scripts
 function scripts_init() {
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'jquery-popover', get_template_directory_uri() . '/js/jquery.popover.js' );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
 	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js' );
 	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.js' );
 }

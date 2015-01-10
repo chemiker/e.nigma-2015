@@ -66,7 +66,7 @@
 				//}	
 			}
 			// hide all the popovers (Added)
-			$(".popover").hide(); 
+			$(".popover").hide();
 			$("#hamburger").show();
 			$("#topnavigation").hide();
 			lastScrollTop = scrollTop;

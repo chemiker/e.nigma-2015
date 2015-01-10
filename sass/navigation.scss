@@ -20,14 +20,15 @@ header {
 		a,
 		a:visited,
 		a:hover {
+			display: block;
 			color: $beige;
 			text-decoration: none;
-			display: block;
 			height: 65px;
 			line-height: 65px;
 			background-color: $navigationbackground;
 			margin-top: -12px;
 			width: 55px;
+			cursor: pointer;
 		}
 	}
 

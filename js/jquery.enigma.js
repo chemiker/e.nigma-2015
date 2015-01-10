@@ -2,19 +2,15 @@
 	$( document ).ready( function() {
 		$('#navigationwrapper').scrollUpMenu({'transitionTime': 100});
 
-		$('#search_link').popover({
-			header: '#search-popover > .popover-header',
-			content: '#search-popover > .popover-content'
-		});
+		popovers = ['search', 'tag', 'category'];
+		$(popovers).each( function (index, slug) {
+			register_popover(slug);
+		} );
 
-		$('#tag_link').popover({
-			header: '#tag-popover > .popover-header',
-			content: '#tag-popover > .popover-content'
-		});
-
-		$('#category_link').popover({
-			header: '#category-popover > .popover-header',
-			content: '#category-popover > .popover-content'
+		$('.popover-link').on('click', function (e) {
+			e.preventDefault();
+			$(this).focus(); // For mobile devives
+			$('.popover-link').not(this).popover('hide');
 		});
 
 		$("#hamburger").on( 'focusin click', function() {
@@ -22,7 +18,7 @@
 			$("#topnavigation").show();
 		} );
 
-		$( window ).on( "resize", function() {
+		$(window).on( "resize", function() {
 			$(".format-image").css( 'min-height', 0.45 * $(this).width() + "px" );
 		} );
 
@@ -30,6 +26,18 @@
 
 		handle_submenus();
 	} );
+
+	function register_popover(slug) {
+		$('#' + slug + '_link').popover({
+			html: true,
+			placement: 'bottom',
+			trigger: 'focus',
+			title: $('#' + slug + '-popover > .popover-header').html(),
+			content: function () {
+				return $('#' + slug + '-popover > .popover-content').html();
+			}
+		});
+	};
 
 	function handle_submenus() {
 		$(".menu>li, div.menu>ul>li").each( function () {

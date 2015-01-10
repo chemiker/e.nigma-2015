@@ -23,7 +23,7 @@ article {
 		min-height: 400px;
 		@include background-size( cover );
 		background-position: center center;
-		box-shadow: inset 0px 0px 30px $darkbeige;
+		@include box-shadow( inset 0px 0px 30px $darkbeige );
 
 		.post-meta {
 			color: $beige;
@@ -289,14 +289,17 @@ a.more-link:visited {
 	background-color: $darkbeige;
 	border-color: $beige;
 	color: $beige;
-	margin: 3em auto 0 auto;
+	margin: 2em 0;
+	padding: {
+		left: 2em;
+		right: 2em;
+	}
 	text: {
 		align: center;
 		transform: capitalize;
 		decoration: none;
 	}
-	display: block;
-	width: 30%;
+	display: inline-block;
 }
 
 a.more-link:hover {

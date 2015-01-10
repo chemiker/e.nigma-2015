@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enigma-2015\n"
-"POT-Creation-Date: 2015-01-09 21:10+0100\n"
-"PO-Revision-Date: 2015-01-09 21:11+0100\n"
+"POT-Creation-Date: 2015-01-10 15:43+0100\n"
+"PO-Revision-Date: 2015-01-10 15:43+0100\n"
 "Last-Translator: Alexander Lueken <edward@nigma.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -24,20 +24,20 @@ msgstr "Willkommen in meinem Blog"
 msgid "Main Menu"
 msgstr "Hauptmen&uuml;"
 
-#: functions/content.php:72
+#: functions/content.php:72 header.php:21
 msgid "Category"
 msgstr "﻿Kategorie"
 
-#: functions/content.php:120
+#: functions/content.php:121
 msgid "Published on:"
 msgstr "Ver&ouml;ffentlicht am:"
 
-#: functions/content.php:150
+#: functions/content.php:151
 #, php-format
 msgid "Continue reading%s"
 msgstr "Weiterlesen %s"
 
-#: functions/customizer.php:10
+#: functions/customizer.php:10 header.php:18
 msgid "Information"
 msgstr "Information"
 
@@ -69,7 +69,11 @@ msgstr "Zur Navigation springen"
 msgid "Navigation"
 msgstr "﻿Navigation"
 
-#: header.php:38
+#: header.php:20 header.php:46
+msgid "Tags"
+msgstr "Tags"
+
+#: header.php:23 header.php:38
 msgid "Search"
 msgstr "Suche"
 
@@ -81,7 +85,7 @@ msgstr "Kategorien"
 msgid "Content"
 msgstr "Inhalt"
 
-#: index.php:28
+#: index.php:27
 msgid "Couldn't find any articles!"
 msgstr "Konnte keine Inhalte finden!"
 

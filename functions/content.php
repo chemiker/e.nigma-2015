@@ -117,7 +117,7 @@
 					$meta = '';
 				break;
 				default :
-					$meta = sprintf('<hr class="before_content" /><span class="screen-reader hidden">%s</span><span class="post-meta-date"><a href="%s">%s</a></span>%s',
+					$meta = sprintf('<hr class="before_content" /><span class="screen-reader hidden">%s</span><span class="post-meta-date"><a href="%s">%s</a></span> %s',
 							 __('Published on:', 'enigma-2015'),
 							 get_the_permalink(),
 							 get_the_date(),

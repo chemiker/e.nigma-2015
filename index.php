@@ -13,8 +13,7 @@
 			<?php echo $post_vars['thumbnail'] ?>
 			<?php echo apply_filters( 'the_content', $post_vars['content'] ); ?>
 			<div class="post-meta">
-				<?php echo $post_vars['meta'] ?>
-				<?php if ( comments_open() ) : ?>
+				<?php echo $post_vars['meta'];  if ( comments_open() ) : ?>
 					<span class="post-meta-comments"><?php comments_popup_link(); ?></span>
 				<?php endif; ?>
 			</div>

@@ -9,5 +9,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 jquery.scrollupformenu - (C) David Simpson
 	is released under the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
-jquery.popover - (C) John Resig
-	is released under the MIT license (http://opensource.org/licenses/MIT)
+Bootstrap - (C) Twitter Inc.
+	is released under the MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE)
