@@ -40,6 +40,9 @@ add_action( 'comment_form_before', function () {
 	wp_enqueue_script( 'comment-reply' );
 });
 
+// Add support for HTML5 elements
+add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
 // Add a wrapper for the "Read more" link
 add_action( 'the_content_more_link', function ($link) {
 	return "<div class='center'>" . $link . "</div>";

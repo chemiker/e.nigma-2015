@@ -37,6 +37,13 @@
 .gallery {
 	margin: 1em 0 2.8em 0 !important;
 
+	figure {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+		text-align: center;
+	}
+
 	img {
 		border: 8px solid $darkbeige !important;
 		@include border-radius(2px);
