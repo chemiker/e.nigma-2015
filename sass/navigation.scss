@@ -20,6 +20,7 @@ header {
 		a,
 		a:visited,
 		a:hover {
+
 			display: block;
 			color: $beige;
 			text-decoration: none;
@@ -29,6 +30,10 @@ header {
 			margin-top: -12px;
 			width: 55px;
 			cursor: pointer;
+		}
+
+		a:focus {
+			outline: none;
 		}
 	}
 
