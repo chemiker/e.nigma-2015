@@ -59,7 +59,7 @@ article {
 	}
 
 	a[rel=tag]:before {
-		content: "\e604";
+		content: $tag;
 		padding-right: 0.4em;
 		font-family: $iconfont;
 	}

@@ -21,10 +21,10 @@
 	</article>
 	<?php endwhile; ?>
 <?php else : ?>
-	<article <?php post_class(); ?>  <?php echo $post_vars['css'] ?>>
+	<article <?php post_class(); ?>>
+		<span class="category enigma-icon" data-icon="&#xe600;"></span>
 		<div class="modifyme">
-			<span class="category" data-icon="?"></span>
-			<h2><?php _e('Couldn\'t find any articles!', 'enigma'); ?></h2>
+			<h2><?php _e('Couldn\'t find any articles!', 'enigma-2015'); ?></h2>
 		</div>
 	</article>
 <?php endif; ?>

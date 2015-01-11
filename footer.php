@@ -14,8 +14,8 @@
 		</ul>
 	</aside>
 	<nav id="primary_navigation" role="navigation">
-		<span class="category category-light enigma-icon" data-icon="&#58887;"></span>
-		<?php wp_nav_menu( array( 
+		<span class="category category-light enigma-icon" data-icon="&#xe608;"></span>
+		<?php wp_nav_menu( array(
 			'theme_location' => 'main_menu',
 			'container' => FALSE
 			) ); ?>

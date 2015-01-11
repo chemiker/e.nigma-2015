@@ -1,6 +1,6 @@
 <?php if ( have_comments() ) : ?>
 	<aside id="comments">
-		<span class="category comment-category enigma-icon" data-icon="&#58905;"></span>
+		<span class="category comment-category enigma-icon" data-icon="&#xe61e;"></span>
 		<div class="modifyme">
 			<ol class="commentlist">
 				<?php

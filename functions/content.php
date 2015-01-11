@@ -78,17 +78,18 @@
 
 		private static function get_category_symbol($format) {
 			$symbols = array(
-					'link' => '&#58880;',
-					'audio' => '&#58881;',
-					'video' => '&#58883;',
-					'quote' => '&#58885;',
-					'aside' => '&#58891;',
-					'image' => '&#58882;',
-					'gallery' => '&#58904;'
+					'link' => '&#xe601;',
+					'audio' => '&#xe602;',
+					'video' => '&#xe604;',
+					'quote' => '&#xe606;',
+					'aside' => '&#xe60b;',
+					'image' => '&#xe603;',
+					'gallery' => '&#xe61d;',
+					'chat' => '&#xe61e;'
 				);
 
 			if ( ! $format || ! isset($symbols[$format]) || ! $symbols[$format] )
-				return '&#58896;';
+				return '&#xe610;';
 
 			return $symbols[$format];
 		}

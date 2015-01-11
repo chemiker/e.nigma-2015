@@ -6,7 +6,7 @@ require 'functions/widgets.php';
 require 'functions/customizer.php';
 
 // Add support for Post formats
-add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery' ) );
+add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery', 'chat' ) );
 
 // Auto-discovery feed in header
 add_theme_support('automatic-feed-links');

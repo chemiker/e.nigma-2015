@@ -3,7 +3,7 @@
  *  Description:  A simple mobile optimised menuing system which gets out of the way when you're not using it.
  *  Author:       David Simpson <david@davidsimpson.me>
  *  License:      Apache License, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
- *  Source:       http://github.com/dvdsmpsn/scroll-up-for-menu
+ *  Source:       https://github.com/dvdsmpsn/Scroll-Up-Menu
  *
  *  Usage:        $('#top').scrollUpForMenu(options);
  *      
@@ -20,7 +20,7 @@
 			//showDelta: 0
 	};
 
-	var lastScrollTop = 0;				
+	var lastScrollTop = 0;
 	var $header;
 	var timer;
 	var pixelsFromTheTop;
@@ -56,7 +56,7 @@
 			var scrollTop = $(window).scrollTop();
 			// var change = lastScrollTop - scrollTop;
 
-			if (scrollTop > lastScrollTop && scrollTop > pixelsFromTheTop){ // ensure that the header doesnt disappear too early
+			if (scrollTop > lastScrollTop && scrollTop > pixelsFromTheTop && ! $("#s").is(":focus") ){ // ensure that the header doesnt disappear too early (Modified)
 				// downscroll
 				$header.slideUp(settings.transitionTime);
 				// hide all the popovers (Added)
