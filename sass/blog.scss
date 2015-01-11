@@ -261,10 +261,11 @@ div.modifyme {
 
 ol.footnotes {
 	font-size: 0.8em;
-	margin: 0 0 2em 1.5em;
+	margin-bottom: 2em;
 
 	li {
 		color: $navigationbackground;
+		margin-left: 1.5em;
 
 		 p {
 			margin: 0.65em 0 0.65em 0;

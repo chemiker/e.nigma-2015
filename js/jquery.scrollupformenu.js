@@ -59,16 +59,16 @@
 			if (scrollTop > lastScrollTop && scrollTop > pixelsFromTheTop){ // ensure that the header doesnt disappear too early
 				// downscroll
 				$header.slideUp(settings.transitionTime);
+				// hide all the popovers (Added)
+				$('.popover-link').popover('hide');
+				$("#hamburger").show();
+				$("#topnavigation").hide();
 			} else {
 				// upscroll
 				//if ( change > settings.showDelta ) {
 				$header.slideDown(settings.transitionTime);
 				//}	
 			}
-			// hide all the popovers (Added)
-			$(".popover").hide();
-			$("#hamburger").show();
-			$("#topnavigation").hide();
 			lastScrollTop = scrollTop;
 		}
 	};

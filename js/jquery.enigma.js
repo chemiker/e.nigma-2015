@@ -9,7 +9,6 @@
 
 		$('.popover-link').on('click', function (e) {
 			e.preventDefault();
-			$(this).focus(); // For mobile devives
 			$('.popover-link').not(this).popover('hide');
 		});
 
@@ -31,7 +30,7 @@
 		$('#' + slug + '_link').popover({
 			html: true,
 			placement: 'bottom',
-			trigger: 'focus',
+			trigger: 'click',
 			title: $('#' + slug + '-popover > .popover-header').html(),
 			content: function () {
 				return $('#' + slug + '-popover > .popover-content').html();
