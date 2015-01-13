@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enigma-2015\n"
-"POT-Creation-Date: 2015-01-10 15:43+0100\n"
-"PO-Revision-Date: 2015-01-10 15:43+0100\n"
+"POT-Creation-Date: 2015-01-13 12:05+0100\n"
+"PO-Revision-Date: 2015-01-13 12:05+0100\n"
 "Last-Translator: Alexander Lueken <edward@nigma.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -20,6 +20,10 @@ msgstr ""
 msgid "Welcome to my blog"
 msgstr "Willkommen in meinem Blog"
 
+#: footer.php:24
+msgid "Powered by"
+msgstr "Powered by"
+
 #: functions.php:29
 msgid "Main Menu"
 msgstr "Hauptmen&uuml;"
@@ -28,11 +32,11 @@ msgstr "Hauptmen&uuml;"
 msgid "Category"
 msgstr "﻿Kategorie"
 
-#: functions/content.php:121
+#: functions/content.php:122
 msgid "Published on:"
 msgstr "Ver&ouml;ffentlicht am:"
 
-#: functions/content.php:151
+#: functions/content.php:152
 #, php-format
 msgid "Continue reading%s"
 msgstr "Weiterlesen %s"

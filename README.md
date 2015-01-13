@@ -12,6 +12,7 @@
 
 **e.nigma 2015** brings the build in support (mostly CSS classes) for a range of WordPress plugins:
 
+* [e.nigma buttons](https://wordpress.org/plugins/enigma-buttons/) *(recommended)*
 * [CF Post Formats](https://github.com/crowdfavorite/wp-post-formats) *(recommended)*
-* [TablePress](http://e.nigma.de/wp-admin/admin.php?page=tablepress)
+* [TablePress](https://wordpress.org/plugins/tablepress/)
 * [Civil Footnotes](https://wordpress.org/plugins/civil-footnotes/)

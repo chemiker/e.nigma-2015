@@ -19,5 +19,5 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 * [CF Post Formats](https://github.com/crowdfavorite/wp-post-formats) *(recommended)*
 * [e.nigma buttons](https://wordpress.org/plugins/enigma-buttons/) *(recommended)*
-* [TablePress](http://e.nigma.de/wp-admin/admin.php?page=tablepress)
+* [TablePress](https://wordpress.org/plugins/tablepress/)
 * [Civil Footnotes](https://wordpress.org/plugins/civil-footnotes/)

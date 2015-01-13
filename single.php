@@ -48,7 +48,7 @@
 </article>
 
 <?php 
-	comments_template( '/comments.php', true ); 
+	comments_template( '/comments.php', true );
 
 	if ( comments_open() ) : ?>
 		<div id="comment_form">

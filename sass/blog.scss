@@ -344,7 +344,7 @@ span.post-navigation {
 			decoration: none;
 		}
 		color: $beige;
-		background-color: $lightgrey;
+		background-color: $navigationbackground;
 	}
 
 	@media(max-width:$textwidth+170px) {

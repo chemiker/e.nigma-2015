@@ -83,5 +83,6 @@ function styles_init() {
 	// Add main stylesheets
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'styles_init' );
