@@ -99,8 +99,25 @@ article {
 		margin: 1em auto 1em auto;
 	}
 
+	img,
+	figure,
+	embed,
+	iframe, 
+	object,
+	video,
+	audio {
+		max-width: 100%;
+	}
+
 	img {
 		@include border-radius( 5px );
+		max-width: 100%;
+		height: auto;
+
+		&[width], &[height] {
+			height: auto;
+		}
+
 		margin: {
 			top: 1em;
 			bottom: -0.7em;
@@ -109,6 +126,25 @@ article {
 		&.wp-post-image {
 			margin-top: 1em;
 		}
+
+		&.attachment-post-thumbnail {
+			display: block;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+		}
+	}
+
+	iframe.twitter-tweet-rendered {
+		width: 100% !important;
+	}
+
+	div.videopress-placeholder,
+	div.videopress-poster,
+	video {
+		width: 100% !important;
+		height: auto !important;
 	}
 
 	li {
