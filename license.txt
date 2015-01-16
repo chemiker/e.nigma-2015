@@ -10,4 +10,13 @@ jquery.scrollupformenu - (C) David Simpson
 	is released under the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 Bootstrap - (C) Twitter Inc.
-	is released under the MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	is released under the MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE
+
+IcoMoon (Free) - (C) keyamoon.com
+	is released under Creative Commons 4.0 (http://creativecommons.org/licenses/by/4.0/)
+
+Linecons - (C) Sergey Shmidt
+	is released under Creative Commons Attribution-ShareAlike 3.0 United States (http://creativecommons.org/licenses/by-sa/3.0/us/)
+
+Entypo - (C) Daniel Bruce
+	is released under Creative Commons Attribution-ShareAlike 3.0 United States (http://creativecommons.org/licenses/by-sa/3.0/us/)

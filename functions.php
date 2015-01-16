@@ -70,19 +70,19 @@ add_filter('wp_link_pages_link', function ($link) {
 });
 
 // Register Scripts
-function scripts_init() {
+function enigma_2015_scripts_init() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
 	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js' );
 	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.js' );
 }
-add_action( 'wp_enqueue_scripts', 'scripts_init' );
+add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 
 // register Styles
-function styles_init() {
+function enigma_2015_styles_init() {
 	// Add main stylesheets
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
-add_action( 'wp_enqueue_scripts', 'styles_init' );
+add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );
