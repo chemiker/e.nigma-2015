@@ -61,14 +61,6 @@ add_filter('oembed_dataparse', function ( $return, $data, $url ) {
 // Add next and number option to wp_link_pages()
 add_filter('wp_link_pages_args','\enigma\Helper::add_next_and_number');
 
-// Add page class to Post pages
-add_filter('wp_link_pages_link', function ($link) {
-	if ( strrpos($link, 'href') )
-		return str_replace("href", "class='page' href", $link);
-
-	return "<a href='".$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]."' class=\"active page\">" . $link . "</a>";
-});
-
 // Register Scripts
 function enigma_2015_scripts_init() {
 	wp_enqueue_script( 'jquery' );
@@ -80,9 +72,8 @@ add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 
 // register Styles
 function enigma_2015_styles_init() {
-	// Add main stylesheets
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array(), false, 'screen' );
 	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );

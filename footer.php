@@ -21,7 +21,7 @@
 			) ); ?>
 		<hr />
 		<span class="copyright">
-			<?php _e('Powered by', 'enigma-2015'); ?> <a href="http://e.nigma.de">e.nigma</a> and <a href="https://wordpress.org">WordPress</a>
+			<?php _e('Powered by', 'enigma-2015'); ?> <a href="http://e.nigma.de">e.nigma</a> <?php _e('and', 'enigma-2015'); ?> <a href="https://wordpress.org">WordPress</a>
 		</span>
 	</nav>
 	<?php wp_footer(); ?>
