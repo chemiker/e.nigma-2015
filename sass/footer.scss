@@ -198,6 +198,15 @@ aside#sidebar {
 					color: $darkbeige;
 				}
 			}
+
+			input {
+				color: $lightgrey;
+				border-color: $lightgrey;
+
+				&:focus {
+					border-color: $beige;
+				}
+			}
 		}
 	}
 }

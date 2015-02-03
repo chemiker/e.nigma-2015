@@ -110,10 +110,10 @@ div.pagebar {
 	a.page-numbers:visited,
 	a.page,
 	a.page:visited, {
-		line-height: 40px;
+		line-height: 2.4em;
 		font-weight: bold;
-		width: 26px;
-		height: 40px;
+		width: 1.5em;
+		height: 2.4em;
 		padding: 0 8px 0 8px;
 		@include border-radius( 24px );
 		display: inline-block;
@@ -160,6 +160,7 @@ div.pagebar {
 		&.active,
 		&.active:visited,
 		&.page:hover,
+		&.page:focus,
 		&.next.page-numbers,
 		&.prev.page-numbers {
 			color: $navigationbackground;

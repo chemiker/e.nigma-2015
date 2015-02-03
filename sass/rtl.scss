@@ -70,11 +70,19 @@ span.post-navigation {
 		@include border-left-radius( 75px );
 	}
 
+	&.next-post a:focus {
+		border-right-width: 0px;
+	}
+
 	&.previous-post a,
 	&.previous-post a:visited {
 		padding-left: 15px;
 		@include border-left-radius( 0px );
 		@include border-right-radius( 75px );
+	}
+
+	&.previous-post a:focus {
+		border-left-width: 0px;
 	}
 }
 

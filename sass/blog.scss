@@ -391,8 +391,13 @@ span.post-navigation {
 	}
 
 	a:visited:hover,
-	a:hover {
+	a:hover,
+	a:focus {
 		background-color: $blockquotecolor;
+	}
+
+	a:focus {
+		border: 3px solid #333;
 	}
 
 	&.next-post a,
@@ -400,6 +405,7 @@ span.post-navigation {
 		padding-left: 15px;
 		right: 0;
 		@include border-left-radius( 75px );
+		border-right-width: 0px;
 	}
 
 	&.previous-post a,
@@ -407,5 +413,6 @@ span.post-navigation {
 		padding-right: 15px;
 		left: 0;
 		@include border-right-radius( 75px );
+		border-left-width: 0px;
 	}
 }

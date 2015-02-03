@@ -48,6 +48,14 @@ add_action( 'the_content_more_link', function ($link) {
 	return "<div class='center'>" . $link . "</div>";
 }, 10, 2 );
 
+// Add page class to Post pages
+add_filter('wp_link_pages_link', function ($link) {
+	if ( strrpos($link, 'href') )
+		return str_replace("href", "class='page' href", $link);
+
+	return "<a href='".$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]."' class=\"active page\">" . $link . "</a>";
+});
+
 // Add localization
 add_action('init', function () {
 	load_theme_textdomain('enigma-2015', '/' . dirname( plugin_basename( __FILE__ ) ) . '/languages');

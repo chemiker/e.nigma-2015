@@ -7,7 +7,7 @@
 	$post_vars = \enigma\Content::get_post_vars( $format );
 ?>
 <article <?php post_class($post_vars['class']); ?>  <?php echo $post_vars['css'] ?>>
-	<span class="category enigma-icon" data-icon="<?php echo $post_vars['category_symbol']; ?>"></span>
+	<span class="category enigma-icon" data-icon="<?php echo $post_vars['category_symbol']; ?>" aria-hidden="true"></span>
 	<div class="modifyme single-page">
 		<?php echo $post_vars['headline']; ?>
 		<?php echo $post_vars['thumbnail'] ?>

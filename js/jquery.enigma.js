@@ -39,23 +39,24 @@
 	};
 
 	function handle_submenus() {
-		$(".menu>li, div.menu>ul>li").each( function () {
+		var menuitems = ".menu>li, div.menu>ul>li"; 
+		$(menuitems).each( function () {
 			$(this).on( 'focusin mouseenter', function () {
+				$(menuitems).removeClass('active-mouse-hover');
 				if ( $(this).children('ul.sub-menu, ul.children').length > 0 ) {
 					$(this).addClass('active-mouse-hover');
 				}
-			} );
-			$(this).on( 'focusout mouseleave', function () {
-				$(this).removeClass('active-mouse-hover');
 			} );
 		} );
 
 		$(".menu li, .page_item li").each( function () {
 			$(this).on( 'focusin mouseenter', function () {
+				if ( $(this).children('ul.sub-menu, ul.children').length <= 0 ) {
+					$(this).parent().find('ul.sub-menu, ul.children').hide();
+				}
 				$(this).children('ul.sub-menu, ul.children').show();
-				$(this).find("ul li").first().focus();
 			} );
-			$(this).on( 'focusout mouseleave', function () {				
+			$(this).on( 'mouseleave', function () {				
 				$(this).children('ul.sub-menu, ul.children').hide();
 			} );
 		} );

@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -36,7 +36,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @font-face {
     font-family: "enigma-icons";
-    src: url('../fonts/enigma.eot?1420975920') format('embedded-opentype'), url('../fonts/enigma.woff?1420975920') format('woff'), url('../fonts/enigma.ttf?1420975920') format('truetype'), url('../fonts/enigma.svg?1420975920') format('svg'), url('../fonts/enigma.eot?&1420975920#iefix') format('embedded-opentype');
+    src: url('../fonts/enigma.eot?1421407890') format('embedded-opentype'), url('../fonts/enigma.woff?1421407890') format('woff'), url('../fonts/enigma.ttf?1421407890') format('truetype'), url('../fonts/enigma.svg?1421407890') format('svg'), url('../fonts/enigma.eot?&1421407890#iefix') format('embedded-opentype');
 }
 .aligncenter {
     display: block;
@@ -253,7 +253,7 @@ header nav ul, .modifyme {
 }
 header {
     background-color: #494949;
-    height: 310px;
+    height: 16.5em;
     margin-bottom: -10px;
 }
 header.portfolio-entry-header {
@@ -376,10 +376,10 @@ div.pagebar.sitepages {
     padding: 60px 0 40px 0;
 }
 div.pagebar span.page-numbers, div.pagebar a.page-numbers, div.pagebar a.page-numbers:visited, div.pagebar a.page, div.pagebar a.page:visited {
-    line-height: 40px;
+    line-height: 2.4em;
     font-weight: bold;
-    width: 26px;
-    height: 40px;
+    width: 1.5em;
+    height: 2.4em;
     padding: 0 8px 0 8px;
     -moz-border-radius: 24px;
     -webkit-border-radius: 24px;
@@ -413,7 +413,7 @@ div.pagebar a.page, div.pagebar a.page:visited, div.pagebar a.page-numbers, div.
     background-color: #7C7C7C;
     border: 3px solid #FAFAFA;
 }
-div.pagebar a:hover, div.pagebar a.active, div.pagebar a.active:visited, div.pagebar a.page:hover, div.pagebar a.next.page-numbers, div.pagebar a.prev.page-numbers {
+div.pagebar a:hover, div.pagebar a.active, div.pagebar a.active:visited, div.pagebar a.page:hover, div.pagebar a.page:focus, div.pagebar a.next.page-numbers, div.pagebar a.prev.page-numbers {
     color: #7C7C7C;
     border-color: #7C7C7C;
     background-color: #FAFAFA;
@@ -765,8 +765,11 @@ span.post-navigation a, span.post-navigation a:visited {
     span.post-navigation a, span.post-navigation a: visited {
     display: none;
 }
-}span.post-navigation a:visited:hover, span.post-navigation a:hover {
+}span.post-navigation a:visited:hover, span.post-navigation a:hover, span.post-navigation a:focus {
     background-color: #757575;
+}
+span.post-navigation a:focus {
+    border: 3px solid #333;
 }
 span.post-navigation.next-post a, span.post-navigation.next-post a:visited {
     padding-left: 15px;
@@ -777,6 +780,7 @@ span.post-navigation.next-post a, span.post-navigation.next-post a:visited {
     -moz-border-radius-bottomleft: 75px;
     -webkit-border-bottom-left-radius: 75px;
     border-bottom-left-radius: 75px;
+    border-right-width: 0px;
 }
 span.post-navigation.previous-post a, span.post-navigation.previous-post a:visited {
     padding-right: 15px;
@@ -787,6 +791,7 @@ span.post-navigation.previous-post a, span.post-navigation.previous-post a:visit
     -moz-border-radius-bottomright: 75px;
     -webkit-border-bottom-right-radius: 75px;
     border-bottom-right-radius: 75px;
+    border-left-width: 0px;
 }
 aside {
     background-color: #494949;
@@ -1213,6 +1218,13 @@ aside#sidebar ul li table td, aside#sidebar ul li table th {
 aside#sidebar ul li table td#today {
     background-color: #FAFAFA;
     color: #494949;
+}
+aside#sidebar ul li input {
+    color: #CDCDCD;
+    border-color: #CDCDCD;
+}
+aside#sidebar ul li input:focus {
+    border-color: #FAFAFA;
 }
 .popover {
     position: absolute;

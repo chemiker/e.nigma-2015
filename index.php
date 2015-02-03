@@ -22,7 +22,7 @@
 	<?php endwhile; ?>
 <?php else : ?>
 	<article <?php post_class(); ?>>
-		<span class="category enigma-icon" data-icon="&#xe600;"></span>
+		<span class="category enigma-icon" data-icon="&#xe600;" aria-hidden="true"></span>
 		<div class="modifyme">
 			<h2><?php _e('Couldn\'t find any articles!', 'enigma-2015'); ?></h2>
 		</div>
