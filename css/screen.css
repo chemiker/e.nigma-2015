@@ -84,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-indent: -9999px;
     position: absolute;
 }
-.screen-reader {
+.screen-reader, .screen-reader-text {
     display: inline-block;
     text-indent: -9999px;
 }
@@ -113,10 +113,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 a, a:visited {
     color: #333;
 }
-a.screen-reader, a:visited.screen-reader {
+a.screen-reader, a.screen-reader-text, a:visited.screen-reader, a:visited.screen-reader-text {
     position: absolute;
 }
-a.screen-reader:focus, a:visited.screen-reader:focus {
+a.screen-reader:focus, a.screen-reader-text:focus, a:visited.screen-reader:focus, a:visited.screen-reader-text:focus {
     position: static;
     display: block;
     background-color: #CDCDCD;

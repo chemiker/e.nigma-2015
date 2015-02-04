@@ -59,7 +59,8 @@
 	position: absolute;
 }
 
-.screen-reader {
+.screen-reader,
+.screen-reader-text {
 	display: inline-block;
 	text-indent: -9999px;
 }
@@ -98,7 +99,8 @@ a,
 a:visited {
 	color: #333;
 
-	&.screen-reader {
+	&.screen-reader,
+	&.screen-reader-text {
 		position: absolute;
 
 		&:focus {

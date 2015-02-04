@@ -39,10 +39,10 @@
 		</div>
 		<?php previous_post_link( 
 			'<span class="post-navigation previous-post">%link</span>', 
-			'&laquo;<span class="screen-reader">%title</span>'
+			'&laquo;<span class="screen-reader-text">%title</span>'
 		 ); ?>
 		<?php next_post_link( '<span class="post-navigation next-post">%link</span>', 
-			'&raquo;<span class="screen-reader">%title</span>'
+			'&raquo;<span class="screen-reader-text">%title</span>'
 		 ); ?>
 	</div>
 </article>

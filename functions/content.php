@@ -4,6 +4,20 @@
 
 	class Content {
 
+		public static function searchform($randomize=false) {
+			if ( $randomize ) {
+				$seed = '-' . mt_rand();
+			} else {
+				$seed = '';
+			}
+			?>
+			<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label for="s<?php echo $seed; ?>" class="screen-reader hidden"><?php _e('Search', 'enigma-2015'); ?></label>
+				<input type="text" class="searchfield" name="s" id="s<?php echo $seed; ?>" placeholder="<?php _e('Search', 'enigma-2015'); ?>" />
+			</form>
+			<?php
+		}
+
 		// Pagebar Clone
 		// Originally created by Sergej Müller
 		public static function pagebar($displayedpages=6) {

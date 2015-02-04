@@ -47,6 +47,9 @@
 					$(this).addClass('active-mouse-hover');
 				}
 			} );
+			$(this).on( 'mouseleave', function () {
+				$(this).removeClass('active-mouse-hover');
+			} );
 		} );
 
 		$(".menu li, .page_item li").each( function () {
