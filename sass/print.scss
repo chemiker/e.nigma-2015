@@ -4,13 +4,12 @@
 @import "compass/css3";
 
 // Fonts
-@include font-face( "Icomoon", font-files("enigma.eot", "enigma.woff", "enigma.ttf", "enigma.svg", "enigma.eot?#iefix") );
 $sans: "Open Sans", "Lucida Grande", Helvetica, sans;
 $condensed: "Roboto Slab", Helvetica, sans;
 $serif: Georgia, "Times New Roman", sans-serif;
 $raleway: "Raleway", Helvetica, sans;
 $code: "Menlo", "Lucida Console", System, sans;
-$iconfont: "enigma-icons";
+$iconfont: "dashicons";
 
 body {
 	font: 12pt/1.85 $sans;

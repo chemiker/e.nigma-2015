@@ -56,7 +56,7 @@
 			var scrollTop = $(window).scrollTop();
 			// var change = lastScrollTop - scrollTop;
 
-			if (scrollTop > lastScrollTop && scrollTop > pixelsFromTheTop && ! $("#s").is(":focus") ){ // ensure that the header doesnt disappear too early (Modified)
+			if (scrollTop > lastScrollTop && scrollTop > pixelsFromTheTop && ! $("div#navigationwrapper .search-field").is(":focus") ){ // ensure that the header doesnt disappear too early (Modified)
 				// downscroll
 				$header.slideUp(settings.transitionTime);
 				// hide all the popovers (Added)

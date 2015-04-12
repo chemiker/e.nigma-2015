@@ -1,6 +1,6 @@
 </section>
 <footer>
-	<span class="category enigma-icon" data-icon="&#58895;" aria-hidden="true"></span>
+	<span class="category enigma-icon" data-icon="&#62280;" aria-hidden="true"></span>
 	<div class="modifyme">
 		<div id="information">
 			<img src="<?php echo get_theme_mod('enigma_2015_information_image', get_template_directory_uri().'/screenshot.png'); ?>"
@@ -14,7 +14,7 @@
 		</ul>
 	</aside>
 	<nav id="primary_navigation" role="navigation">
-		<span class="category category-light enigma-icon" data-icon="&#xe608;" aria-hidden="true"></span>
+		<span class="category category-light enigma-icon" data-icon="&#62259;" aria-hidden="true"></span>
 		<?php wp_nav_menu( array(
 			'theme_location' => 'main_menu',
 			'container' => FALSE

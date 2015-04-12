@@ -34,10 +34,6 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
-@font-face {
-    font-family: "enigma-icons";
-    src: url('../fonts/enigma.eot?1421407890') format('embedded-opentype'), url('../fonts/enigma.woff?1421407890') format('woff'), url('../fonts/enigma.ttf?1421407890') format('truetype'), url('../fonts/enigma.svg?1421407890') format('svg'), url('../fonts/enigma.eot?&1421407890#iefix') format('embedded-opentype');
-}
 .aligncenter {
     display: block;
     margin: 0 auto;
@@ -67,7 +63,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .gallery figure {
     display: inline-block;
-    width: 33%;
+    width: 30%;
+    margin-right: 3%;
     vertical-align: top;
     text-align: center;
 }
@@ -93,7 +90,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .enigma-icon[data-icon]:before {
     content: attr(data-icon);
-    font-family: "enigma-icons", Helvetica;
+    font-family: "dashicons", Helvetica;
 }
 .portfolio-entry {
     margin-bottom: 0px !important;
@@ -293,7 +290,7 @@ header div#navigationwrapper {
     z-index: 9999;
 }
 header nav {
-    font-family: "enigma-icons", sans-serif;
+    font-family: "dashicons", sans-serif;
     font-size: 1.4em;
     background-color: #7C7C7C;
     text-align: center;
@@ -484,9 +481,9 @@ article.sticky {
     display: block;
 }
 article a[rel=tag]:before {
-    content: "";
+    content: "";
     padding-right: 0.4em;
-    font-family: "enigma-icons"}
+    font-family: "dashicons"}
 article a[rel=tag] {
     display: inline-block;
     background-color: #494949;
@@ -618,16 +615,16 @@ article .post-meta-date a, article .post-meta-date a:visited {
 }
 article .post-meta-date:before {
     padding-right: 0.5em;
-    font-family: "enigma-icons";
-    content: ""}
+    font-family: "dashicons";
+    content: ""}
 article .post-meta-category:before {
     padding-right: 0.5em;
-    font-family: "enigma-icons";
-    content: ""}
+    font-family: "dashicons";
+    content: ""}
 article .post-meta-comments:before {
     padding-right: 0.5em;
-    font-family: "enigma-icons";
-    content: ""}
+    font-family: "dashicons";
+    content: ""}
 article h2 a, article h2 a:visited {
     text-decoration: none;
     color: #333;
@@ -741,7 +738,7 @@ span.category {
     border-radius: 35px;
     background-color: #494949;
     text-align: center;
-    font: 1.5em/65px "enigma-icons", sans-serif, sans;
+    font: 1.5em/65px "dashicons", sans-serif, sans;
 }
 .link_arrow {
     opacity: 0.6;
@@ -1039,6 +1036,12 @@ input:focus, textarea:focus {
     outline: none;
     border-color: #494949;
 }
+input.search-field, textarea.search-field {
+    width: 240px;
+}
+input.search-submit, textarea.search-submit {
+    display: none;
+}
 input[type=submit] {
     cursor: pointer;
     color: #7a7a7a;
@@ -1046,9 +1049,6 @@ input[type=submit] {
 input[type=submit]:hover {
     color: #494949;
     border-color: #494949;
-}
-input.searchfield {
-    width: 240px;
 }
 ol.commentlist input, ol.commentlist textarea {
     color: #CDCDCD;

@@ -1,1 +1,0 @@
-<?php \enigma\Content::searchform(true); ?>

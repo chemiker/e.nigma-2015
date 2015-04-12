@@ -1,36 +1,37 @@
 <?php
-
 require 'functions/content.php';
 require 'functions/helper.php';
 require 'functions/widgets.php';
 require 'functions/customizer.php';
 
-// Add support for Post formats
-add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery', 'chat' ) );
+add_action( 'after_setup_theme', function () {
+	// Add support for Post formats
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery', 'chat' ) );
 
-// Auto-discovery feed in header
-add_theme_support('automatic-feed-links');
+	// Auto-discovery feed in header
+	add_theme_support('automatic-feed-links');
 
-// Article image support. http://codex.wordpress.org/Post_Thumbnails
-add_theme_support('post-thumbnails');
+	// Article image support. http://codex.wordpress.org/Post_Thumbnails
+	add_theme_support('post-thumbnails');
 
-// Support Title-tag
-add_theme_support( "title-tag" );
+	// Support Title-tag
+	add_theme_support( "title-tag" );
 
-// Add support for HTML5 elements
-add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
+	// Add support for HTML5 elements
+	add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+	// Textdomain
+	load_theme_textdomain('enigma-2015', '/' . dirname( plugin_basename( __FILE__ ) ) . '/languages');
+
+	// Register Menu location(s)
+	register_nav_menus( array(
+		'main_menu' => __( 'Main Menu', 'enigma-2015' )
+	) );
+});
 
 // Set maximum article width to 677px
 if ( ! isset( $content_width ) )
 	$content_width = 584;
-
-// Remove generator-tag for security reasons
-remove_action('wp_head', 'wp_generator');
-
-// Register Menu location(s)
-register_nav_menus( array(
-	'main_menu' => __( 'Main Menu', 'enigma-2015' )
-) );
 
 // Add actions for customizer
 add_action('customize_register', '\enigma\Customizer::register');
@@ -56,11 +57,6 @@ add_filter('wp_link_pages_link', function ($link) {
 	return "<a href='".$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]."' class=\"active page\">" . $link . "</a>";
 });
 
-// Add localization
-add_action('init', function () {
-	load_theme_textdomain('enigma-2015', '/' . dirname( plugin_basename( __FILE__ ) ) . '/languages');
-});
-
 // Fix invalid Video containers
 add_filter('oembed_dataparse', function ( $return, $data, $url ) {
 	return str_replace(' frameborder="0"', '', $return);
@@ -71,17 +67,16 @@ add_filter('wp_link_pages_args','\enigma\Helper::add_next_and_number');
 
 // Register Scripts
 function enigma_2015_scripts_init() {
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
-	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js' );
-	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.js' );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 
 // register Styles
 function enigma_2015_styles_init() {
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array(), false, 'screen' );
-	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), false, 'screen' );
+	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array( 'dashicons' ), false, 'print' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );

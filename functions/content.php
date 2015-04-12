@@ -8,7 +8,7 @@
 			if ( $randomize ) {
 				$seed = '-' . mt_rand();
 			} else {
-				$seed = '';
+				$seed = ''; 
 			}
 			?>
 			<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -92,18 +92,18 @@
 
 		private static function get_category_symbol($format) {
 			$symbols = array(
-					'link' => '&#xe601;',
-					'audio' => '&#xe602;',
-					'video' => '&#xe604;',
-					'quote' => '&#xe606;',
-					'aside' => '&#xe60b;',
-					'image' => '&#xe603;',
-					'gallery' => '&#xe61d;',
-					'chat' => '&#xe61e;'
+					'link' => '&#61699;',
+					'audio' => '&#61735;',
+					'video' => '&#62006;',
+					'quote' => '&#61730;',
+					'aside' => '&#61731;',
+					'image' => '&#62214;',
+					'gallery' => '&#61793;',
+					'chat' => '&#61733;'
 				);
 
 			if ( ! $format || ! isset($symbols[$format]) || ! $symbols[$format] )
-				return '&#xe610;';
+				return '&#61972;';
 
 			return $symbols[$format];
 		}

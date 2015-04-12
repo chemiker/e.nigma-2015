@@ -13,6 +13,14 @@ textarea {
 		outline: none;
 		border-color: $darkbeige;
 	}
+
+	&.search-field {
+		width: 240px;
+	}
+
+	&.search-submit {
+		display: none;
+	}
 }
 
 input[type=submit] {
@@ -23,10 +31,6 @@ input[type=submit] {
 		color: $darkbeige;
 		border-color: $darkbeige;
 	}
-}
-
-input.searchfield {
-	width: 240px;
 }
 
 ol.commentlist {

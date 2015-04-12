@@ -22,7 +22,7 @@
 	<?php endwhile; ?>
 <?php else : ?>
 	<article <?php post_class(); ?>>
-		<span class="category enigma-icon" data-icon="&#xe600;" aria-hidden="true"></span>
+		<span class="category enigma-icon" data-icon="&#61817;" aria-hidden="true"></span>
 		<div class="modifyme">
 			<h2><?php _e('Couldn\'t find any articles!', 'enigma-2015'); ?></h2>
 		</div>
@@ -34,7 +34,7 @@
 	
 	if ( $wp_query->max_num_pages > 1 ) :
 		?>
-		<span class="category pagebar-category enigma-icon" data-icon="&#58914;"></span><div class="pagebar">
+		<span class="category pagebar-category enigma-icon" data-icon="&#62256;"></span><div class="pagebar">
 		<?php previous_posts_link(); \enigma\Content::Pagebar(); next_posts_link();	?> </div>
 		<?php
 	endif;

@@ -12,14 +12,14 @@
 <header role="banner">
 	<div id="navigationwrapper" <?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true) ? ' style="margin-top: 31px;"' : '' ) ?>>
 	<nav>
-		<a id="hamburger" tabindex="0" data-icon="&#xe608;" class="enigma-icon"><span class="screen-reader-text"><?php _e('Navigation', 'enigma-2015'); ?></span></a>
+		<a id="hamburger" tabindex="0" data-icon="&#62259;" class="enigma-icon"><span class="screen-reader-text"><?php _e('Navigation', 'enigma-2015'); ?></span></a>
 		<ul id="topnavigation"><li>
-				<a href="#information" id="information_link" data-icon="&#58895;" class="enigma-icon"><span class="screen-reader-text hidden"><?php _e('Information', 'enigma-2015'); ?></span></a>
+				<a href="#information" id="information_link" data-icon="&#62280;" class="enigma-icon"><span class="screen-reader-text hidden"><?php _e('Information', 'enigma-2015'); ?></span></a>
 			</li><li>
-				<a href="#" id="tag_link" data-icon="&#xe605;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Tags', 'enigma-2015'); ?></span></a>
-			</li><li><a href="#" id="category_link" data-icon="&#58897;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Category', 'enigma-2015'); ?></span></a>
+				<a href="#" id="tag_link" data-icon="&#62243;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Tags', 'enigma-2015'); ?></span></a>
+			</li><li><a href="#" id="category_link" data-icon="&#62232;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Category', 'enigma-2015'); ?></span></a>
 			</li><li>
-				<a href="#" id="search_link" data-icon="&#58902;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Search', 'enigma-2015'); ?></span></a>
+				<a href="#" id="search_link" data-icon="&#61817;" class="enigma-icon popover-link"><span class="screen-reader-text hidden"><?php _e('Search', 'enigma-2015'); ?></span></a>
 			</li>
 		</ul>
 	</nav>
@@ -37,7 +37,7 @@
 			<label for="s"><?php _e('Search', 'enigma-2015'); ?></label>
 		</div>
 		<div class="popover-content">
-	   		<?php \enigma\Content::searchform(); ?>
+	   		<?php get_search_form(); ?>
 		</div>
 	</div>
 	<div id="tag-popover" class="popover">

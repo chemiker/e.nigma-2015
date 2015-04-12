@@ -1,12 +1,11 @@
 // Fonts
-@include font-face( "enigma-icons", font-files("enigma.eot", "enigma.woff", "enigma.ttf", "enigma.svg", "enigma.eot?#iefix") );
 $sans: "Open Sans", "Lucida Grande", Helvetica, sans;
 $condensed: "Roboto Slab", Helvetica, sans;
 $serif: Georgia, "Times New Roman", sans-serif;
 $raleway: "Raleway", Helvetica, sans;
 $code: "Menlo", "Lucida Console", System, sans;
 $arrow: "Times New Roman", sans-serif;
-$iconfont: "enigma-icons";
+$iconfont: "dashicons";
 
 // Fontsize
 $textsize: 19px;
@@ -43,8 +42,8 @@ $post-image-headline-background: rgba( 0, 0, 0, 0.55 );
 $post-image-p-background: rgba( 0, 0, 0, 0.4 );
 
 // Symbols
-$rss: "\e60e";
-$comments: "\e61e";
-$calendar: "\e621";
-$category: "\e611";
-$tag: "\e605";
+$rss: "\f303";
+$comments: "\f101";
+$calendar: "\f508";
+$category: "\f318";
+$tag: "\f323";
