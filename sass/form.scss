@@ -7,6 +7,7 @@ textarea {
 	padding: 5px 10px 5px 10px;
 	border: 2px solid #CCC;
 	@include border-radius( 10px );
+	-webkit-appearance: none;
 	background: rgba( 0, 0, 0, 0);
 
 	&:focus {

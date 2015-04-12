@@ -82,6 +82,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: absolute;
 }
 .screen-reader, .screen-reader-text {
+    width: 0px;
     display: inline-block;
     text-indent: -9999px;
 }
@@ -1030,6 +1031,7 @@ input, textarea {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    -webkit-appearance: none;
     background: transparent;
 }
 input:focus, textarea:focus {
