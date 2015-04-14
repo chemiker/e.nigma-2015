@@ -7,7 +7,6 @@ textarea {
 	padding: 5px 10px 5px 10px;
 	border: 2px solid #CCC;
 	@include border-radius( 10px );
-	-webkit-appearance: none;
 	background: rgba( 0, 0, 0, 0);
 
 	&:focus {
@@ -24,6 +23,14 @@ textarea {
 	}
 }
 
+input[type=file] {
+	font: 15px/1.1 $sans;
+}
+
+input[type=search] {
+	-webkit-appearance: none;
+}
+
 input[type=submit] {
 	cursor: pointer;
 	color: #7a7a7a;
@@ -32,6 +39,15 @@ input[type=submit] {
 		color: $darkbeige;
 		border-color: $darkbeige;
 	}
+}
+
+fieldset {
+	border: 1px solid $darkbeige;
+	padding: 10px;
+}
+
+legend {
+	padding: 0 5px 0 5px;
 }
 
 ol.commentlist {

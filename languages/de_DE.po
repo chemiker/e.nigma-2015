@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enigma-2015\n"
-"POT-Creation-Date: 2015-01-30 12:04+0100\n"
-"PO-Revision-Date: 2015-01-30 12:05+0100\n"
+"POT-Creation-Date: 2015-04-13 14:45+0100\n"
+"PO-Revision-Date: 2015-04-13 14:47+0100\n"
 "Last-Translator: Alexander Lueken <edward@nigma.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: footer.php:8 functions/customizer.php:16
+#: footer.php:8 functions/customizer.php:29
 msgid "Welcome to my blog"
 msgstr "Willkommen in meinem Blog"
 
@@ -28,11 +28,11 @@ msgstr "Powered by"
 msgid "and"
 msgstr "und"
 
-#: functions.php:32
+#: functions.php:38
 msgid "Main Menu"
 msgstr "Hauptmen&uuml;"
 
-#: functions/content.php:72 header.php:20
+#: functions/content.php:72 header.php:40
 msgid "Category"
 msgstr "﻿Kategorie"
 
@@ -45,19 +45,23 @@ msgstr "Ver&ouml;ffentlicht am:"
 msgid "Continue reading%s"
 msgstr "Weiterlesen %s"
 
-#: functions/customizer.php:10 header.php:17
+#: functions/customizer.php:17
+msgid "Header Link Color"
+msgstr "Linkfarbe im Header"
+
+#: functions/customizer.php:23 header.php:37
 msgid "Information"
 msgstr "Information"
 
-#: functions/customizer.php:11
+#: functions/customizer.php:24
 msgid "Displays a small about section in the footer of your blog."
 msgstr "Zeigt eine kleine Infobox im Footer des Blogs an."
 
-#: functions/customizer.php:22
+#: functions/customizer.php:35
 msgid "About"
 msgstr "Info"
 
-#: functions/customizer.php:35
+#: functions/customizer.php:48
 msgid "Image"
 msgstr "Bild"
 
@@ -65,37 +69,41 @@ msgstr "Bild"
 msgid "Footer"
 msgstr "Footer"
 
-#: header.php:9
+#: header.php:29
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: header.php:10
+#: header.php:30
 msgid "Skip to Navigation"
 msgstr "Zur Navigation springen"
 
-#: header.php:15
+#: header.php:35
 msgid "Navigation"
 msgstr "﻿Navigation"
 
-#: header.php:19 header.php:45
+#: header.php:39 header.php:69
 msgid "Tags"
 msgstr "Tags"
 
-#: header.php:22 header.php:37
+#: header.php:42 header.php:61
 msgid "Search"
 msgstr "Suche"
 
-#: header.php:57
+#: header.php:81
 msgid "Categories"
 msgstr "Kategorien"
 
-#: header.php:69
+#: header.php:93
 msgid "Content"
 msgstr "Inhalt"
 
 #: index.php:27
 msgid "Couldn't find any articles!"
 msgstr "Konnte keine Inhalte finden!"
+
+#: searchform.php:4
+msgid "Search for:"
+msgstr "Suche nach:"
 
 #: single.php:23
 msgid "Next Page &raquo;"

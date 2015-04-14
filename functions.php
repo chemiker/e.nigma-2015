@@ -6,7 +6,7 @@ require 'functions/customizer.php';
 
 add_action( 'after_setup_theme', function () {
 	// Add support for Post formats
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery', 'chat' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'video', 'audio', 'image', 'quote', 'gallery', 'chat', 'status' ) );
 
 	// Auto-discovery feed in header
 	add_theme_support('automatic-feed-links');
@@ -15,7 +15,16 @@ add_action( 'after_setup_theme', function () {
 	add_theme_support('post-thumbnails');
 
 	// Support Title-tag
-	add_theme_support( "title-tag" );
+	add_theme_support( 'title-tag' );
+
+	// Support Custom header and custom background image
+	add_theme_support( 'custom-header', array(
+		'default-text-color' => 'AAA',
+		'height' => 125
+	) );
+	add_theme_support( 'custom-background', array(
+		'default-color' => '494949',
+	)  );
 
 	// Add support for HTML5 elements
 	add_theme_support( 'html5', array( 'comment-form', 'search-form', 'gallery', 'caption' ) );
@@ -27,6 +36,11 @@ add_action( 'after_setup_theme', function () {
 	register_nav_menus( array(
 		'main_menu' => __( 'Main Menu', 'enigma-2015' )
 	) );
+});
+
+// Add editor style
+add_action( 'admin_init', function () {
+	add_editor_style( 'css/editor-style.min.css' );
 });
 
 // Set maximum article width to 677px
@@ -76,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 // register Styles
 function enigma_2015_styles_init() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), false, 'screen' );
-	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array( 'dashicons' ), false, 'print' );
+	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.min.css', array( 'dashicons' ), false, 'print' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );

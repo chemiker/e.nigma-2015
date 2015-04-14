@@ -9,10 +9,13 @@ body {
 	&>a.screen-reader:visited {
 		color: $beige
 	}
+
+	&.custom-background {
+		@include background-size( 100%, 100% );
+	}
 }
 
 #wrapper {
-	background-color: $beige;
 	color: $darkbeige;
 }
 

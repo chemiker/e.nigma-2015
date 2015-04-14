@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import "compass/css3";
+@import "settings";
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+.center {
+	text-align: center;
+}
+
+.wp-caption {}
+
+.gallery-caption {
+	color: $blockquotecolor;
+}
+
+.wp-caption-text {
+	font: {
+		size: 0.7em;
+		style: italic;
+	}
+	margin-top: 8px;
+	text-align: center;
+}
+
+.gallery {
+	margin: 1em 0 2.8em 0 !important;
+
+	img {
+		display: inline-block;
+		width: 97%;
+		margin-right: 3%;
+		vertical-align: top;
+		text-align: center;
+		border: 8px solid $darkbeige !important;
+		@include border-radius(2px);
+
+		&:hover {
+			border-color: $navigationbackground !important;
+		}
+	}
+}
+
+.portfolio-entry {
+	margin-bottom: 0px !important;
+}
+
+.portfolio-entry-column-2 {
+	width: 46% !important;
+}
+
+.portfolio-entry-column-2 {
+	img {
+		border: 8px solid $darkbeige !important;
+		@include border-radius(2px);
+
+		&:hover {
+			border-color: $navigationbackground !important;
+		}
+	}
+}
+
+hr {
+	margin: 3em 0 3em 0;
+	border: 0;
+	height: 1px;
+	@include background-image( linear-gradient(to left, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0)) );
+}
+
+table {
+	font-size: 0.8em;
+	border: {
+		top: 2px solid $darkbeige !important;
+		bottom: 2px solid $darkbeige !important;
+	}
+	margin: 1.5em auto 1.5em auto;
+	padding: 0px;
+	height: auto;
+	width: 90%;
+}
+
+
+thead {
+	th {
+		background: none !important;
+		border-bottom: 1px solid $darkbeige !important;
+	}
+}
+
+tr {
+	margin: 0px;
+
+	th, td {
+		padding: 3px;
+	}	
+
+	td {
+		margin: 0px;
+		line-height: 1.3em !important;
+	}
+}
+
+p {
+		margin: 1.7em 0 1.7em 0;
+		hyphens: auto;
+	}
+
+	iframe {
+		display: block;
+		margin: 0 auto 1em auto;
+		border: none;
+	}
+
+	div.video-player,
+	embed,
+	object {
+		display: block;
+		margin: 1em auto 1em auto;
+	}
+
+	img,
+	figure,
+	embed,
+	iframe, 
+	object,
+	video,
+	audio {
+		max-width: 100%;
+	}
+
+	img {
+		@include border-radius( 5px );
+		max-width: 100%;
+		height: auto;
+
+		&[width], &[height] {
+			height: auto;
+		}
+
+		margin: {
+			top: 1em;
+			bottom: -0.7em;
+		}
+
+		&.wp-post-image {
+			margin-top: 1em;
+		}
+
+		&.attachment-post-thumbnail {
+			display: block;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+		}
+	}
+
+	iframe.twitter-tweet-rendered {
+		width: 100% !important;
+	}
+
+	div.videopress-placeholder,
+	div.videopress-poster,
+	video {
+		width: 100% !important;
+		height: auto !important;
+	}

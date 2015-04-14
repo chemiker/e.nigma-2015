@@ -1,4 +1,4 @@
-﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -233,8 +233,12 @@ body {
 body>a.screen-reader, body>a.screen-reader:visited {
     color: #FAFAFA;
 }
+body.custom-background {
+    -moz-background-size: 100%, 100%;
+    -o-background-size: 100%, 100%;
+    -webkit-background-size: 100%, 100%;
+    background-size: 100%, 100%}
 #wrapper {
-    background-color: #FAFAFA;
     color: #494949;
 }
 header nav ul, .modifyme {
@@ -250,7 +254,6 @@ header nav ul, .modifyme {
     padding-top: 2em;
 }
 header {
-    background-color: #494949;
     height: 16.5em;
     margin-bottom: -10px;
 }
@@ -275,8 +278,11 @@ header.portfolio-entry-header h2.portfolio-entry-title {
     color: #FAFAFA;
     line-height: 1.5em;
 }
+.placeholder h1 img {
+    max-height: 125px;
+}
 .placeholder .description, a.more-link {
-    border: 2px solid #757575;
+    border: 2px solid #AAA;
     padding: 5px 10px 5px 10px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -438,7 +444,7 @@ span.pagebar-category, span.category-light {
 section {
     background-color: #FAFAFA;
 }
-article, aside, div#comment_form {
+article, div#comment_form {
     padding: 0px 0 60px 0;
     color: #494949;
     border-top: 7px solid #494949;
@@ -547,7 +553,7 @@ article div.videopress-placeholder, article div.videopress-poster, article video
 article li {
     font-size: 0.95em;
     opacity: 0.85;
-    margin-left: 1em;
+    margin-left: 1.5em;
 }
 article>div.modifyme>ul, article>div.modifyme>dl, article>div.modifyme>dd, article>div.modifyme>ol {
     margin: 1em 0 1em 0;
@@ -603,10 +609,9 @@ article form.post-password-form {
 }
 article .post-meta {
     display: block;
-    margin: 0.2em 0 1em 0;
     text-align: center;
+    opacity: 0.7;
     font-size: 15px;
-    opacity: 0.8;
 }
 article .post-meta-date, article .post-meta-category {
     margin-right: 1em;
@@ -615,17 +620,26 @@ article .post-meta-date a, article .post-meta-date a:visited {
     text-decoration: none;
 }
 article .post-meta-date:before {
-    padding-right: 0.5em;
+    padding-right: 0.3em;
     font-family: "dashicons";
     content: ""}
 article .post-meta-category:before {
-    padding-right: 0.5em;
+    padding-right: 0.3em;
     font-family: "dashicons";
     content: ""}
 article .post-meta-comments:before {
-    padding-right: 0.5em;
+    padding-right: 0.3em;
     font-family: "dashicons";
     content: ""}
+article h1 a, article h1 a:visited {
+    text-decoration: none;
+    color: #333;
+}
+article h1 {
+    text-align: center;
+    font: 3.9em/1.4 "Roboto Slab", Helvetica, sans;
+    margin-top: 0;
+}
 article h2 a, article h2 a:visited {
     text-decoration: none;
     color: #333;
@@ -791,8 +805,9 @@ span.post-navigation.previous-post a, span.post-navigation.previous-post a:visit
     border-bottom-right-radius: 75px;
     border-left-width: 0px;
 }
-aside {
+aside#comments {
     background-color: #494949;
+    padding-bottom: 60px;
 }
 ol.commentlist {
     font-size: 0.8em;
@@ -814,6 +829,15 @@ ol.commentlist li.comment div#respond {
     width: 100%}
 ol.commentlist li.comment div#respond textarea, ol.commentlist li.comment div#respond input {
     width: 85%}
+ol.commentlist li.comment div.comment-body h1 a, ol.commentlist li.comment div.comment-body h1 a:visited {
+    text-decoration: none;
+    color: #333;
+}
+ol.commentlist li.comment div.comment-body h1 {
+    text-align: center;
+    font: 3.9em/1.4 "Roboto Slab", Helvetica, sans;
+    margin-top: 0;
+}
 ol.commentlist li.comment div.comment-body h2 a, ol.commentlist li.comment div.comment-body h2 a:visited {
     text-decoration: none;
     color: #333;
@@ -1031,7 +1055,6 @@ input, textarea {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    -webkit-appearance: none;
     background: transparent;
 }
 input:focus, textarea:focus {
@@ -1044,6 +1067,12 @@ input.search-field, textarea.search-field {
 input.search-submit, textarea.search-submit {
     display: none;
 }
+input[type=file] {
+    font: 15px/1.1 "Open Sans", "Lucida Grande", Helvetica, sans;
+}
+input[type=search] {
+    -webkit-appearance: none;
+}
 input[type=submit] {
     cursor: pointer;
     color: #7a7a7a;
@@ -1051,6 +1080,13 @@ input[type=submit] {
 input[type=submit]:hover {
     color: #494949;
     border-color: #494949;
+}
+fieldset {
+    border: 1px solid #494949;
+    padding: 10px;
+}
+legend {
+    padding: 0 5px 0 5px;
 }
 ol.commentlist input, ol.commentlist textarea {
     color: #CDCDCD;
@@ -1071,7 +1107,6 @@ ol.commentlist input[type=submit]:hover {
     color: #494949;
 }
 footer {
-    background-color: #494949;
     border-top: 1px solid #444;
     text-align: center;
     color: #d3d3d3;

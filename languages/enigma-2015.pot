@@ -44,6 +44,10 @@ msgstr ""
 msgid "Continue reading%s"
 msgstr ""
 
+#: functions/customizer.php:17
+msgid "Header Link Color"
+msgstr ""
+
 #: functions/customizer.php:10 header.php:17
 msgid "Information"
 msgstr ""
@@ -94,6 +98,10 @@ msgstr ""
 
 #: index.php:27
 msgid "Couldn't find any articles!"
+msgstr ""
+
+#: searchform.php:4
+msgid "Search for:"
 msgstr ""
 
 #: single.php:23

@@ -5,7 +5,6 @@ section {
 }
 
 article,
-aside,
 div#comment_form {
 	padding: 0px 0 60px 0;
 	color: $darkbeige;
@@ -150,7 +149,7 @@ article {
 	li {
 		font-size: 0.95em;
 		opacity: 0.85;
-		margin-left: 1em;
+		margin-left: 1.5em;
 	}
 
 	& > div.modifyme > ul,
@@ -232,10 +231,9 @@ article {
 
 	.post-meta {
 		display: block;
-		margin: 0.2em 0 1em 0;
 		text-align: center;
+		opacity: 0.7;
 		font-size: 15px;
-		opacity: 0.8;
 
 		&-date,
 		&-category {
@@ -257,7 +255,7 @@ article {
 
 		@each $name, $icon in $metasymbols {
 			&-#{$name}:before {
-				padding-right: 0.5em;
+				padding-right: 0.3em;
 				font-family: $iconfont;
 				content: $icon;
 			}

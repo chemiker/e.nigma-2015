@@ -21,3 +21,13 @@ If using the "image" post-type it is recommended to set the image you want to sh
 * [e.nigma buttons](https://wordpress.org/plugins/enigma-buttons/) *(recommended)*
 * [TablePress](https://wordpress.org/plugins/tablepress/)
 * [Civil Footnotes](https://wordpress.org/plugins/civil-footnotes/)
+
+## Changelog
+
+### 1.1
+
+* Enhancements in Accessibility
+* Support custom Header and Background
+* Support "status" post-type
+* Add editor-style
+* Various bugfixes

@@ -9,5 +9,19 @@
 	</div>
 </article>
 
+<?php 
+	comments_template( '/comments.php', true );
+
+	if ( comments_open() ) : ?>
+		<div id="comment_form">
+			<span class="category enigma-icon" data-icon="&#61697;"></span>
+			<div id="comment_reply_form">
+			<?php 
+				comment_form();
+			?>
+			</div>
+		</div>
+<?php endif; ?>
+
 <?php get_sidebar(); ?>
 <?php get_footer();
