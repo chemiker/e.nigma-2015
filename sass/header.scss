@@ -1,7 +1,6 @@
 /* -------------------------------- Header */
 
 header {
-	background-color: $darkbeige;
 	height: 16.5em;
 	margin-bottom: -10px;
 
@@ -36,12 +35,16 @@ header {
 			color: $beige;
 			line-height: 1.5em;
 		}
+
+		img {
+			max-height: 125px;
+		}
 	}
 }
 
 .placeholder .description,
 a.more-link {
-	border: 2px solid $blockquotecolor;
+	border: 2px solid $pagebarcolor;
 	padding: 5px 10px 5px 10px;
 	@include border-radius( 12px );
 	color: $pagebarcolor;

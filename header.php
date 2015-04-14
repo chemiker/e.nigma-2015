@@ -4,6 +4,26 @@
 <meta charset="<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=900" />
 <?php wp_head(); ?>
+<style type="text/css">
+	header div.placeholder h1 a,
+	header div.placeholder h1 a:visited,
+	footer a,
+	footer a:visited,
+	footer aside#sidebar ul li a,
+	footer aside#sidebar ul li a:visited {
+		color: #<?php echo get_theme_mod('enigma_2015_header_link_color', 'FAFAFA') ?>;
+	}
+	
+	header div.placeholder span.description, 
+	footer,
+	footer h2 {
+		color: #<?php header_textcolor() ?>;
+	}
+
+	header div.placeholder span.description {
+		border-color: #<?php header_textcolor() ?>;
+	}
+</style>
 </head>
 <body <?php body_class(); ?>>
 <a href="#primary_content" class="screen-reader-text"><?php _e('Skip to content', 'enigma-2015'); ?></a>
@@ -27,14 +47,18 @@
 	<div class="placeholder">
 		<h1>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<?php bloginfo('name'); ?>
+				<?php if ( get_header_image() ) : ?>
+					<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+				<?php else : ?>
+					<?php bloginfo('name'); ?>
+				<?php endif; ?>
 			</a>
 		</h1>
 		<span class="description"><?php bloginfo('description'); ?></span>
 	</div>
 	<div id="search-popover" class="popover" role="search">
 		<div class="popover-header">
-			<label for="s"><?php _e('Search', 'enigma-2015'); ?></label>
+			<?php _e('Search', 'enigma-2015'); ?>
 		</div>
 		<div class="popover-content">
 	   		<?php get_search_form(); ?>

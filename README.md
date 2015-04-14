@@ -16,3 +16,13 @@
 * [CF Post Formats](https://github.com/crowdfavorite/wp-post-formats) *(recommended)*
 * [TablePress](https://wordpress.org/plugins/tablepress/)
 * [Civil Footnotes](https://wordpress.org/plugins/civil-footnotes/)
+
+## Changelog
+
+### 1.1
+
+* Enhancements in Accessibility
+* Support custom Header and Background
+* Support "status" post-type
+* Add editor-style
+* Various bugfixes

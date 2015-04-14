@@ -18,6 +18,7 @@ $h5: 1.4em;
 $h6: 1.1em;
 
 $headings: (
+	("h1", $h1, 0),
 	("h2", $h2, 0),
 	("h3", $h3, 1em),
 	("h3.comment-reply-title", $h3, 0),
