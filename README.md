@@ -19,6 +19,12 @@
 
 ## Changelog
 
+### 1.1.2
+* Fixed a bug that overwrites the number of columns in galleries set by the users
+
+### 1.1.1
+* Various Bugfixes
+
 ### 1.1
 
 * Enhancements in Accessibility

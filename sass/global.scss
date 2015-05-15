@@ -39,19 +39,38 @@
 
 	figure {
 		display: inline-block;
-		width: 30%;
 		margin-right: 3%;
 		vertical-align: top;
 		text-align: center;
 	}
 
+	figcaption {
+		line-height: 1.1em;
+	}
+
 	img {
-		border: 8px solid $darkbeige !important;
+		border: {
+			style: solid;
+			color: $darkbeige;
+		}
 		@include border-radius(2px);
 
 		&:hover {
 			border-color: $navigationbackground !important;
 		}
+	}
+
+	@each $columns, $width, $border in $galleries {
+		&-columns-#{$columns} {
+			figure {
+				width: $width;
+			}
+
+			img {
+				border-width: $border;
+			}
+		}
+
 	}
 }
 
@@ -65,6 +84,7 @@
 	width: 0px;
 	display: inline-block;
 	text-indent: -9999px;
+	color: $beige;
 }
 
 .bypostauthor {
@@ -108,8 +128,8 @@ a:visited {
 		&:focus {
 			position: static;
 			display: block;
-			background-color: $lightgrey;
-			color: $darkbeige;
+			width: 100%;
+			color: $beige;
 			padding: 70px 0px 20px 0px;
 			text: {
 				align: center;

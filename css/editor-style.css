@@ -1,3 +1,7 @@
+body {
+    color: #494949;
+    background-color: #FAFAFA;
+}
 .aligncenter {
     display: block;
     margin: 0 auto;
@@ -31,13 +35,70 @@
     margin-right: 3%;
     vertical-align: top;
     text-align: center;
-    border: 8px solid #494949 !important;
+    border: 5px solid #494949;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
 }
 .gallery img:hover {
     border-color: #7C7C7C !important;
+}
+.gallery dd.wp-caption-text {
+    margin-top: 15px;
+}
+.gallery-columns-1 dl dl, .gallery-columns-1 figure {
+    width: 657px;
+}
+.gallery-columns-1 dl dt img, .gallery-columns-1 img {
+    border-width: 10px;
+}
+.gallery-columns-2 dl dl, .gallery-columns-2 figure {
+    width: 298.5px;
+}
+.gallery-columns-2 dl dt img, .gallery-columns-2 img {
+    border-width: 8px;
+}
+.gallery-columns-3 dl dl, .gallery-columns-3 figure {
+    width: 195.66667px;
+}
+.gallery-columns-3 dl dt img, .gallery-columns-3 img {
+    border-width: 8px;
+}
+.gallery-columns-4 dl dl, .gallery-columns-4 figure {
+    width: 139.25px;
+}
+.gallery-columns-4 dl dt img, .gallery-columns-4 img {
+    border-width: 7px;
+}
+.gallery-columns-5 dl dl, .gallery-columns-5 figure {
+    width: 105.4px;
+}
+.gallery-columns-5 dl dt img, .gallery-columns-5 img {
+    border-width: 7px;
+}
+.gallery-columns-6 dl dl, .gallery-columns-6 figure {
+    width: 82.83333px;
+}
+.gallery-columns-6 dl dt img, .gallery-columns-6 img {
+    border-width: 6px;
+}
+.gallery-columns-7 dl dl, .gallery-columns-7 figure {
+    width: 66.71429px;
+}
+.gallery-columns-7 dl dt img, .gallery-columns-7 img {
+    border-width: 6px;
+}
+.gallery-columns-8 dl dl, .gallery-columns-8 figure {
+    width: 54.625px;
+}
+.gallery-columns-8 dl dt img, .gallery-columns-8 img {
+    border-width: 5px;
+}
+.gallery-columns-9 dl dl, .gallery-columns-9 figure {
+    width: 45.22222px;
+}
+.gallery-columns-9 dl dt img, .gallery-columns-9 img {
+    border-width: 5px;
 }
 .portfolio-entry {
     margin-bottom: 0px !important;
@@ -61,10 +122,10 @@ hr {
     background-image: url('data:image/svg+xml;
     base64, PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzQ5NDk0OSIgc3RvcC1vcGFjaXR5PSIwLjc1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background-size: 100%;
-    background-image: -webkit-gradient(linear,  100% 50%,  0% 50%,  color-stop(0%,  rgba(0, 0, 0, 0)), color-stop(50%,  rgba(73, 73, 73, 0.75)), color-stop(100%,  rgba(0, 0, 0, 0)));
-    background-image: -moz-linear-gradient(right,  rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
-    background-image: -webkit-linear-gradient(right,  rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to left,  rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
+    background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(73, 73, 73, 0.75)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
+    background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
 }
 table {
     font-size: 0.8em;

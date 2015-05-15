@@ -2,6 +2,11 @@
 @import "compass/css3";
 @import "settings";
 
+body {
+	color: $darkbeige;
+	background-color: $beige;
+}
+
 .aligncenter {
 	display: block;
 	margin: 0 auto;
@@ -45,12 +50,29 @@
 		margin-right: 3%;
 		vertical-align: top;
 		text-align: center;
-		border: 8px solid $darkbeige !important;
+		border: 5px solid  $darkbeige;
 		@include border-radius(2px);
 
 		&:hover {
 			border-color: $navigationbackground !important;
 		}
+	}
+
+	dd.wp-caption-text {
+		margin-top: 15px;
+	}
+
+	@each $columns, $width, $border in $galleries {
+		&-columns-#{$columns} {
+			dl dl, figure {
+				width: $width;
+			}
+
+			dl dt img, img {
+				border-width: $border;
+			}
+		}
+
 	}
 }
 

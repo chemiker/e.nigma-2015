@@ -29,6 +29,17 @@ $headings: (
 
 // Dimensions
 $textwidth: 677px;
+$galleries : (
+	("1", $textwidth - 20, 10px),
+	("2", ( ( $textwidth ) / 2 ) - 40, 8px),
+	("3", ( ( $textwidth ) / 3 ) - 30, 8px),
+	("4", ( ( $textwidth ) / 4 ) - 30, 7px),
+	("5", ( ( $textwidth ) / 5 ) - 30, 7px),
+	("6", ( ( $textwidth ) / 6 ) - 30, 6px),
+	("7", ( ( $textwidth ) / 7 ) - 30, 6px),
+	("8", ( ( $textwidth ) / 8 ) - 30, 5px),
+	("9", ( ( $textwidth ) / 9 ) - 30, 5px)
+);
 
 // Colors
 $beige: #FAFAFA;
