@@ -24,6 +24,15 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 ## Changelog
 
+### 1.1.3
+* Fixed a bug that caused <code> elements to contain invisible code
+
+### 1.1.2
+* Fixed a bug that overwrites the number of columns in galleries set by the users
+
+### 1.1.1
+* Various Bugfixes
+
 ### 1.1
 
 * Enhancements in Accessibility
