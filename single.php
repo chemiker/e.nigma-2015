@@ -20,8 +20,8 @@
 		    wp_link_pages(array(
 		        'before' =>  '',
 		        'after' => '',
-		        'nextpagelink' => __('Next Page &raquo;', 'enigma-2015'),
-		        'previouspagelink' => __('&laquo; Previous Page', 'enigma-2015'),
+		        'nextpagelink' => __('Next Page &raquo;', 'e.nigma-2015'),
+		        'previouspagelink' => __('&laquo; Previous Page', 'e.nigma-2015'),
 		        'next_or_number' => 'next_and_number',
 		        'pagelink' => '%',
 		        'echo' => 1 )
@@ -29,7 +29,7 @@
 		?>
 		</div>
 		<?php
-			endif; 
+			endif;
 		?>
 		<div class="post-meta">
 			<div class="tags">
@@ -37,24 +37,24 @@
 			</div>
 			<?php echo $post_vars['meta']; ?>
 		</div>
-		<?php previous_post_link( 
-			'<span class="post-navigation previous-post">%link</span>', 
+		<?php previous_post_link(
+			'<span class="post-navigation previous-post">%link</span>',
 			'&laquo;<span class="screen-reader-text">%title</span>'
 		 ); ?>
-		<?php next_post_link( '<span class="post-navigation next-post">%link</span>', 
+		<?php next_post_link( '<span class="post-navigation next-post">%link</span>',
 			'&raquo;<span class="screen-reader-text">%title</span>'
 		 ); ?>
 	</div>
 </article>
 
-<?php 
+<?php
 	comments_template( '/comments.php', true );
 
 	if ( comments_open() ) : ?>
 		<div id="comment_form">
 			<span class="category enigma-icon" data-icon="&#61697;"></span>
 			<div id="comment_reply_form">
-			<?php 
+			<?php
 				comment_form();
 			?>
 			</div>

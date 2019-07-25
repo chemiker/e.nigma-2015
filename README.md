@@ -19,8 +19,12 @@
 
 ## Changelog
 
+### 1.2
+* Enhanced experience on mobile devices (theme is "mobile friendly" now)
+* Improved compatibility with recent WordPress versions
+
 ### 1.1.3
-* Fixed a bug that caused <code> elements to contain invisible code
+* Fixed a bug that caused `<code>` elements to contain invisible code
 
 ### 1.1.2
 * Fixed a bug that overwrites the number of columns in galleries set by the users

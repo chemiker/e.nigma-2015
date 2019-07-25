@@ -1,0 +1,65 @@
+@media only screen and (max-width: 420px) {
+
+  header {
+    height: 14em;
+  }
+
+  article {
+    div.single-page h2,
+    h2 {
+  		font-size: 2em;
+  	}
+  }
+
+  .placeholder {
+  	h1 {
+  		a,
+  	 	a:visited {
+  			font-size: $h1 * 0.7;
+      }
+    }
+  }
+
+  #respond {
+    textarea,
+    input {
+      width: 100%;
+    }
+  }
+
+  div#comment_form form,
+  div#comment_reply_form {
+  	width: 95%;
+  }
+
+  .modifyme {
+    width: 95%;
+  }
+
+  div#wrapper footer {
+    #information {
+  		p {
+  			width: 95%;
+  		}
+    }
+
+    .modifyme {
+      width: 100%;
+    }
+
+    aside#sidebar {
+    	width: 100%;
+
+      ul {
+        li.widget {
+          width: 95%;
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+}

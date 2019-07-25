@@ -32,7 +32,16 @@ article {
 			a:visited {
 				color: $beige;
 			}
-		}	
+		}
+
+		article {
+			footer {
+				a,
+				a:visited {
+					color: #000;
+				}
+			}
+		}
 	}
 
 	&.image-post-with-thumbnail {
@@ -53,7 +62,7 @@ article {
 		}
 	}
 
-	&.sticky { 
+	&.sticky {
 		display: block;
 	}
 
@@ -101,7 +110,7 @@ article {
 	img,
 	figure,
 	embed,
-	iframe, 
+	iframe,
 	object,
 	video,
 	audio {
@@ -212,7 +221,7 @@ article {
 
 		th, td {
 			padding: 3px;
-		}	
+		}
 
 		td {
 			border: none !important;
@@ -288,6 +297,15 @@ article {
 	div.single-page h2 {
 		font-size: 3em;
 	}
+
+	ol.wp-block-latest-comments {
+		background-color: $darkbeige;
+		color: $beige;
+
+		article {
+			color: $beige;
+		}
+	}
 }
 
 div.modifyme {
@@ -305,13 +323,13 @@ ol.footnotes {
 		 p {
 			margin: 0.65em 0 0.65em 0;
 			line-height: 1.5em;
-			
+
 			a,
 			a:visited {
 				color: $navigationbackground;
 			}
 		}
-	}	 
+	}
 }
 
 hr.footnotes {

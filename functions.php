@@ -34,7 +34,7 @@ add_action( 'after_setup_theme', function () {
 
 	// Register Menu location(s)
 	register_nav_menus( array(
-		'main_menu' => __( 'Main Menu', 'enigma-2015' )
+		'main_menu' => __( 'Main Menu', 'e.nigma-2015' )
 	) );
 });
 
@@ -68,7 +68,7 @@ add_filter('wp_link_pages_link', function ($link) {
 	if ( strrpos($link, 'href') )
 		return str_replace("href", "class='page' href", $link);
 
-	return "<a href='".$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]."' class=\"active page\">" . $link . "</a>";
+	return "<a href='". isset($_SERVER["HTTP_HOST"]) . isset($_SERVER["REQUEST_URI"]) ."' class=\"active page\">" . $link . "</a>";
 });
 
 // Fix invalid Video containers
@@ -90,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 // register Styles
 function enigma_2015_styles_init() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), false, 'screen' );
-	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.min.css', array( 'dashicons' ), false, 'print' );
+	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array( 'dashicons' ), false, 'print' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );

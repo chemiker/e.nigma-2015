@@ -24,6 +24,10 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 ## Changelog
 
+### 1.2
+* Enhanced experience on mobile devices (theme is "mobile friendly" now)
+* Improved compatibility with recent WordPress versions
+
 ### 1.1.3
 * Fixed a bug that caused <code> elements to contain invisible code
 

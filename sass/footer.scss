@@ -5,7 +5,7 @@
 	color: $darkbeige;
 }
 
-footer {
+div#wrapper footer {
 	border-top: 1px solid #444;
 	text-align: center;
 	color: #d3d3d3;
@@ -110,7 +110,7 @@ footer {
 		}
 	}
 
-	
+
 	#information {
 		p {
 			margin-top: 1em;
@@ -155,7 +155,7 @@ footer {
 aside#sidebar {
 	margin: 2em auto 0 auto;
 	width: 850px;
-	
+
 	ul {
 		li {
 			display: inline-block;
@@ -170,7 +170,7 @@ aside#sidebar {
 			a:visited {
 				color: $beige;
 			}
-			
+
 			h2 {
 				border: {
 					top: 1px solid $navigationbackground;

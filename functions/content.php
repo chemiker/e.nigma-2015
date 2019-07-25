@@ -69,7 +69,7 @@
 
 			if ( ! empty($categories) ) {
 				$categories = sprintf('<span class="screen-reader hidden">%s: </span><span class="post-meta-category">%s</span>',
-						__('Category', 'enigma-2015'),
+						__('Category', 'e.nigma-2015'),
 						$categories
 					);
 				return $categories;
@@ -120,7 +120,7 @@
 				break;
 				default :
 					$meta = sprintf('<hr class="before_content" /><span class="screen-reader hidden">%s</span><span class="post-meta-date"><a href="%s">%s</a></span> %s',
-							 __('Published on:', 'enigma-2015'),
+							 __('Published on:', 'e.nigma-2015'),
 							 get_the_permalink(),
 							 get_the_date(),
 							 self::get_categories()
@@ -150,23 +150,23 @@
 
 			return get_the_content(
 						sprintf(
-								__( 'Continue reading%s', 'enigma-2015' ), 
-								'<span class="screen-reader hidden">  '.get_the_title().'</span>&hellip;' 
+								__( 'Continue reading%s', 'e.nigma-2015' ),
+								'<span class="screen-reader hidden">  '.get_the_title().'</span>&hellip;'
 							)
 					);
 		}
 
 		private static function get_content($format) {
 			$content = self::get_text_for_archive_page();
-				
-			$oembed = wp_oembed_get( 
+
+			$oembed = wp_oembed_get(
 						get_post_meta( get_the_ID(), '_format_'.$format.'_embed', true ),
 						array( 'width' => 677 )
 					);
 
 			if ($format == 'video' || $format == 'audio')
 				return ( $oembed ? $oembed : get_post_meta( get_the_ID(), '_format_'.$format.'_embed', true ) ) . $content;
-			
+
 			if ($format == 'image' && $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ))
 				return '<img class="hide" src="'.$featured_image[0].'" alt="'.get_the_title().'" />' . $content;
 
@@ -183,7 +183,7 @@
 		private static function get_css($format, $css='') {
 			if ( $format == 'image' && $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) )
 				$css = "style=\"background-image: url('".$featured_image[0]."')\"";
-			
+
 			return $css;
 		}
 
