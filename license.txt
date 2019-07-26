@@ -11,3 +11,17 @@ jquery.scrollupformenu - Copyright (C) David Simpson
 
 Bootstrap - Copyright (C) 2011-2019 Twitter, Inc., Copyright (c) 2011-2019 The Bootstrap Authors
 	is released under the MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+This theme uses Google Fonts:
+
+Raleway - Copyright (C) 2010, Matt McInerney,
+					Copyright (C) 2011, Pablo Impallari,
+					Copyright (C) 2011, Rodrigo Fuenzalida,
+					with Reserved Font Name Raleway
+	is released under the SIL Open Font license 1.1 (http://scripts.sil.org/OFL)
+
+Open Sans - Copyright (C) Steve Matteson
+	is released under the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+Roboto Slab - Copyright (C) Christian Robertson
+	is released under the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)
