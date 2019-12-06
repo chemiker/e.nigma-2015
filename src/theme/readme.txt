@@ -24,6 +24,9 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 ## Changelog
 
+### 1.2.1
+* Several "under the hood" improvements
+
 ### 1.2
 * Enhanced experience on mobile devices (theme is "mobile friendly" now)
 * Improved compatibility with recent WordPress versions
@@ -44,3 +47,13 @@ If using the "image" post-type it is recommended to set the image you want to sh
 * Support "status" post-type
 * Add editor-style
 * Various bugfixes
+
+## Resources
+
+* jquery.scrollupformenu - Copyright (C) David Simpson
+* Bootstrap - Copyright (C) 2011-2019 Twitter, Inc., Copyright (c) 2011-2019 The Bootstrap Authors
+* reset.css - Copyright (C) Eric Meyer (http://meyerweb.com/eric/tools/css/reset/)
+* Font: Raleway - Copyright (C) 2010, Matt McInerney, Copyright (C) 2011, Pablo Impallari, Copyright (C) 2011, Rodrigo Fuenzalida,					with Reserved Font Name Raleway
+* Font: Open Sans - Copyright (C) Steve Matteson
+* Font: Roboto Slab - Copyright (C) Christian Robertson
+* Test files were generated using [WP-CLI](https://wp-cli.org/)

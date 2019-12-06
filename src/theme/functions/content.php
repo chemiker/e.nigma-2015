@@ -5,7 +5,7 @@
 	class Content {
 
 		// Pagebar Clone
-		// Originally created by Sergej Müller
+		// Originally created by [Sergej Müller](https://sergejmueller.github.io)
 		public static function pagebar($displayedpages=6) {
 			global $wp_query;
 		    $max_num_pages = $wp_query->max_num_pages;

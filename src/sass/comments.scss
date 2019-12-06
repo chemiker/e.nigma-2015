@@ -9,7 +9,7 @@ ol.commentlist {
 	font-size: $commentsize;
 	color: $lightgrey;
 	background-color: $comment-list-background;
-	@include border-radius(5px);
+	border-radius: 5px;
 
 	ul.children {
 		background-color: darken($darkbeige, 2);
@@ -182,7 +182,7 @@ ol.commentlist {
 
 	img.avatar {
 		display: block;
-		@include border-radius( 80px );
+		border-radius:  80px ;
 		margin: 1em auto 0 auto;
 		border: 5px solid $darkbeige;
 	}
@@ -191,7 +191,7 @@ ol.commentlist {
 		display: block;
 		background-color: #962c2c;
 		color: #FFF;
-		@include border-radius( 5px );
+		border-radius:  5px ;
 		text-align: center;
 		margin-bottom: -2em;
 	}

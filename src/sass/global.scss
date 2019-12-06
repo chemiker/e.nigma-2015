@@ -63,7 +63,7 @@
 			style: solid;
 			color: $darkbeige;
 		}
-		@include border-radius(2px);
+		border-radius: 2px;
 
 		&:hover {
 			border-color: $navigationbackground !important;
@@ -119,7 +119,7 @@
 .portfolio-entry-column-2 {
 	img {
 		border: 8px solid $darkbeige !important;
-		@include border-radius(2px);
+		border-radius: 2px;
 
 		&:hover {
 			border-color: $navigationbackground !important;
@@ -158,12 +158,12 @@ hr {
 	margin: 3em 0 3em 0;
 	border: 0;
 	height: 1px;
-	@include background-image( linear-gradient(to left, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0)) );
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(73, 73, 73, 0.75), rgba(0, 0, 0, 0));
 }
 
 hr.popover-rule {
 	margin: 0px;
-	@include background-image( linear-gradient(to left, rgba(0, 0, 0, 0), rgba(176, 176, 176, 75), rgba(0, 0, 0, 0)) );
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(176, 176, 176, 75), rgba(0, 0, 0, 0));
 }
 
 hr.before_content {
@@ -239,7 +239,7 @@ sub {
 pre {
 	overflow: auto;
 	white-space: pre;
-	@include border-radius( 5px );
+	border-radius: 5px;
 	margin: 1.5em 0 0 0;
 
 	code {

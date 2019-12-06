@@ -81,7 +81,7 @@ div#wrapper footer {
 
 			&.active-mouse-hover {
 				background-color: $navigationbackground;
-				@include border-top-radius( 12px );
+				border-top-radius: 12px;
 
 				a,
 				a:visited {
@@ -120,7 +120,7 @@ div#wrapper footer {
 		img {
 			width: 160px;
 			height: 160px;
-			@include border-radius( 90px );
+			border-radius: 90px;
 			border: 6px solid #333;
 		}
 	}
