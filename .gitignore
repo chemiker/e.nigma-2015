@@ -1,2 +1,13 @@
 .sass-cache/
 .DS_Store
+node_modules/
+css/
+js/
+functions/
+img/
+languages/
+licenses/
+*.php
+*.css
+readme.txt
+screenshot.png

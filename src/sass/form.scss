@@ -6,7 +6,7 @@ textarea {
 	color: $darkbeige;
 	padding: 5px 10px 5px 10px;
 	border: 2px solid #CCC;
-	@include border-radius( 10px );
+	border-radius: 10px;
 	background: rgba( 0, 0, 0, 0);
 
 	&:focus {

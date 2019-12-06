@@ -82,15 +82,15 @@ add_filter('wp_link_pages_args','\enigma\Helper::add_next_and_number');
 // Register Scripts
 function enigma_2015_scripts_init() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js', array( 'jquery' ) );
-	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.min.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_scripts_init' );
 
 // register Styles
 function enigma_2015_styles_init() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), false, 'screen' );
-	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.css', array( 'dashicons' ), false, 'print' );
+	wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.min.css', array( 'dashicons' ), false, 'print' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'enigma_2015_styles_init' );

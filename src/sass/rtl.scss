@@ -1,6 +1,4 @@
 @charset "utf-8";
-
-@import "compass/css3";
 @import "settings";
 
 body {
@@ -66,8 +64,8 @@ span.post-navigation {
 	&.next-post a,
 	&.next-post a:visited {
 		padding-right: 15px;
-		@include border-right-radius( 0px );
-		@include border-left-radius( 75px );
+		border-right-radius: 0px;
+		border-left-radius: 75px;
 	}
 
 	&.next-post a:focus {
@@ -77,8 +75,8 @@ span.post-navigation {
 	&.previous-post a,
 	&.previous-post a:visited {
 		padding-left: 15px;
-		@include border-left-radius( 0px );
-		@include border-right-radius( 75px );
+		border-left-radius: 0px;
+		border-right-radius: 75px;
 	}
 
 	&.previous-post a:focus {
@@ -87,8 +85,8 @@ span.post-navigation {
 }
 
 #search_link {
-	@include border-bottom-right-radius( 0px );
-	@include border-bottom-left-radius( 35px );
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 35px;
 	padding: {
 		right: 0px;
 		left: 10px;
@@ -100,8 +98,8 @@ span.post-navigation {
 }
 
 #information_link {
-	@include border-bottom-left-radius( 0px );
-	@include border-bottom-right-radius( 35px );
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 35px;
 	padding: {
 		left: 10px;
 		right: 0px;

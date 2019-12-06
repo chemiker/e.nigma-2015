@@ -20,13 +20,13 @@ article {
 
 	&.format-image.image-post-with-thumbnail {
 		min-height: 400px;
-		@include background-size( cover );
+		background-size: cover;
 		background-position: center center;
-		@include box-shadow( inset 0px 0px 30px $darkbeige );
+		box-shadow: inset 0px 0px 30px $darkbeige;
 
 		.post-meta {
 			color: $beige;
-			@include text-shadow($darkbeige 0px 0px 12px, $darkbeige 0px 0px 12px);
+			text-shadow: $darkbeige 0px 0px 12px;
 
 			a,
 			a:visited {
@@ -51,7 +51,7 @@ article {
 				display: inline-block;
 				color: $beige;
 				background-color: $post-image-headline-background;
-				@include border-radius( 5px );
+				border-radius: 5px;
 				padding: 10px 15px 10px 15px;
 
 			}
@@ -80,7 +80,7 @@ article {
 		margin: 3px;
 		text-decoration: none;
 		font-size: 0.8em;
-		@include border-radius( 8px );
+		border-radius: 8px;
 		white-space: nowrap;
 		opacity: 0.5;
 
@@ -118,7 +118,7 @@ article {
 	}
 
 	img {
-		@include border-radius( 5px );
+		border-radius: 5px;
 		max-width: 100%;
 		height: auto;
 
@@ -370,7 +370,7 @@ span.category {
 	position: relative;
 	top: -35px;
 	color: $beige;
-	@include border-radius( 35px );
+	border-radius: 35px;
 	background-color: $darkbeige;
 	text-align: center;
 	font: 1.5em/65px $iconfont, sans-serif, sans;
@@ -421,7 +421,7 @@ span.post-navigation {
 	&.next-post a:visited {
 		padding-left: 15px;
 		right: 0;
-		@include border-left-radius( 75px );
+		border-left-radius: 75px;
 		border-right-width: 0px;
 	}
 
@@ -429,7 +429,7 @@ span.post-navigation {
 	&.previous-post a:visited {
 		padding-right: 15px;
 		left: 0;
-		@include border-right-radius( 75px );
+		border-right-radius: 75px;
 		border-left-width: 0px;
 	}
 }
