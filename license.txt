@@ -6,6 +6,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+Theme theme contains software and fonts released under individual licenses:
+
 jquery.scrollupformenu - Copyright (C) David Simpson
 	is released under the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
@@ -13,7 +15,7 @@ Bootstrap - Copyright (C) 2011-2019 Twitter, Inc., Copyright (c) 2011-2019 The B
 	is released under the MIT License (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 reset.css - Copyright (C) Eric Meyer (http://meyerweb.com/eric/tools/css/reset/)
-	is released as Public domain
+	is released as public domain
 
 This theme uses Google Fonts:
 

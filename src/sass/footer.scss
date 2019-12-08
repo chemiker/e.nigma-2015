@@ -81,7 +81,7 @@ div#wrapper footer {
 
 			&.active-mouse-hover {
 				background-color: $navigationbackground;
-				border-top-radius: 12px;
+				border-radius: 12px 12px 0 0;
 
 				a,
 				a:visited {
