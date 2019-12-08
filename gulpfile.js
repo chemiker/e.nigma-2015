@@ -41,7 +41,7 @@ function renderCSS() {
 
     createCSSFiles(screen, 'screen.css', 'screen.min.css');
     createCSSFiles(print, 'print.css', 'print.min.css');
-    createCSSFiles(editor, 'editor.css', 'editor.min.css');
+    createCSSFiles(editor, 'editor-style.css', 'editor-style.min.css');
     return createCSSFiles(rtl, 'rtl.css', 'rtl.min.css');
 }
 
@@ -55,12 +55,7 @@ function compressJS(variable, filename) {
         .pipe(gulp.dest('./js/'));
 }
 
-
-gulp.task('stylesheets', function () {
-    return renderCSS();
-})
-
-gulp.task('js', function () {
+function renderJS() {
     var bootstrap = merge(
         gulp.src('node_modules/bootstrap/js/tooltip.js'),
         gulp.src('node_modules/bootstrap/js/popover.js')
@@ -78,6 +73,14 @@ gulp.task('js', function () {
 
     return gulp.src(js)
         .pipe(gulp.dest('./js/'));
+}
+
+gulp.task('stylesheets', function () {
+    return renderCSS();
+})
+
+gulp.task('js', function () {
+    return renderJS();
 })
 
 gulp.task('theme', function () {
@@ -86,14 +89,17 @@ gulp.task('theme', function () {
 })
 
 gulp.task('dev', function () {
-    gulp.watch(watchPaths, gulp.parallel('stylesheets', 'js', 'theme'))
+    return gulp.watch(watchPaths, gulp.parallel('stylesheets', 'js', 'theme'));
 })
 
 gulp.task('make', function () {
     renderCSS();
+    renderJS();
+    gulp.src('license.txt')
+        .pipe(gulp.dest('dist/'));
     gulp.src('css/*')
         .pipe(gulp.dest('dist/css/'));
-    gulp.src(js)
+    gulp.src('js/*')
         .pipe(gulp.dest('dist/js/'));
     return gulp.src(theme)
         .pipe(gulp.dest('dist/'));
