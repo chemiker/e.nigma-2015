@@ -1293,7 +1293,7 @@ gulp-concat@*:
     through2 "^2.0.0"
     vinyl "^2.0.0"
 
-gulp-replace@^1.0.0:
+gulp-replace@*:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gulp-replace/-/gulp-replace-1.0.0.tgz#b32bd61654d97b8d78430a67b3e8ce067b7c9143"
   integrity sha512-lgdmrFSI1SdhNMXZQbrC75MOl1UjYWlOWNbNRnz+F/KHmgxt3l6XstBoAYIdadwETFyG/6i+vWUSCawdC3pqOw==

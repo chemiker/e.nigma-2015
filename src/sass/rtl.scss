@@ -64,8 +64,7 @@ span.post-navigation {
 	&.next-post a,
 	&.next-post a:visited {
 		padding-right: 15px;
-		border-right-radius: 0px;
-		border-left-radius: 75px;
+		border-radius: 75px 0 0 75px;
 	}
 
 	&.next-post a:focus {
@@ -75,8 +74,7 @@ span.post-navigation {
 	&.previous-post a,
 	&.previous-post a:visited {
 		padding-left: 15px;
-		border-left-radius: 0px;
-		border-right-radius: 75px;
+		border-radius: 0 75px 75px 0;
 	}
 
 	&.previous-post a:focus {

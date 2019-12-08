@@ -21,6 +21,9 @@
 
 ## Changelog
 
+### 1.2.1
+* Several "under the hood" improvements
+
 ### 1.2
 * Enhanced experience on mobile devices (theme is "mobile friendly" now)
 * Improved compatibility with recent WordPress versions

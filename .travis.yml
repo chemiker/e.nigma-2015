@@ -13,6 +13,7 @@ branches:
     - master
 
 cache:
+  yarn: true
   directories:
     - $HOME/.composer/cache
 
@@ -28,6 +29,10 @@ matrix:
       env: WP_VERSION=latest
 
 before_script:
+  - yarn install
+  - yarn run gulp js
+  - yarn run gulp stylesheets
+  - yarn run gulp theme
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - |
     if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
