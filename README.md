@@ -21,6 +21,9 @@
 
 ## Changelog
 
+### 1.2.2
+* Fixed an error in build script that resulted in yielding broken JS
+
 ### 1.2.1
 * Several "under the hood" improvements
 
