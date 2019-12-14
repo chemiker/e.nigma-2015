@@ -3,6 +3,7 @@
 **e.nigma 2015** is a WordPress theme that was developed for [e.nigma](http://e.nigma.de). It is thought to be used with [WordPress posts formats](http://codex.wordpress.org/Post_Formats).
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/767420930abd5ede9110/maintainability)](https://codeclimate.com/github/chemiker/e.nigma-2015/maintainability) [![Build Status](https://travis-ci.com/chemiker/e.nigma-2015.svg?branch=master)](https://travis-ci.com/chemiker/e.nigma-2015)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fchemiker%2Fe.nigma-2015.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fchemiker%2Fe.nigma-2015?ref=badge_shield)
 
 ## Installation
 
@@ -57,3 +58,7 @@
 * Font: Open Sans - Copyright (C) Steve Matteson
 * Font: Roboto Slab - Copyright (C) Christian Robertson
 * Test files were generated using [WP-CLI](https://wp-cli.org/)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fchemiker%2Fe.nigma-2015.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fchemiker%2Fe.nigma-2015?ref=badge_large)
