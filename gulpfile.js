@@ -63,7 +63,6 @@ function renderJS() {
         enigma = gulp.src('./src/js/jquery.enigma.js'),
         scrollupformenu = gulp.src('./src/js/jquery.scrollupformenu.js');
 
-
     bootstrap.pipe(concat('bootstrap.js'))
         .pipe(gulp.dest('./js/'));
 
@@ -93,14 +92,14 @@ gulp.task('dev', function () {
 })
 
 gulp.task('make', function () {
-    renderCSS();
-    renderJS();
+    gulp.series('stylesheets', 'js');
     gulp.src('license.txt')
         .pipe(gulp.dest('dist/'));
     gulp.src('css/*')
         .pipe(gulp.dest('dist/css/'));
     gulp.src('js/*')
         .pipe(gulp.dest('dist/js/'));
+
     return gulp.src(theme)
         .pipe(gulp.dest('dist/'));
 })

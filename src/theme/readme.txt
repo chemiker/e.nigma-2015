@@ -24,6 +24,9 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 ## Changelog
 
+### 1.2.2
+* Fixed an error in build script that resulted in yielding broken JS
+
 ### 1.2.1
 * Several "under the hood" improvements
 
