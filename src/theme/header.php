@@ -11,7 +11,7 @@
 	footer a:visited,
 	footer aside#sidebar ul li a,
 	footer aside#sidebar ul li a:visited {
-		color: #<?php echo get_theme_mod('enigma_2015_header_link_color', 'FAFAFA') ?>;
+		color: #<?php echo esc_attr( get_theme_mod('enigma_2015_header_link_color', 'FAFAFA') ) ?>;
 	}
 
 	header div.placeholder span.description,
@@ -26,6 +26,13 @@
 </style>
 </head>
 <body <?php body_class(); ?>>
+<?php
+	if ( function_exists('wp_body_open') ) {
+		wp_body_open();
+	} else {
+		do_action('wp_body_open');
+	}
+?>
 <a href="#primary_content" class="screen-reader-text"><?php esc_html_e('Skip to content', 'e.nigma-2015'); ?></a>
 <a href="#primary_navigation" class="screen-reader-text"><?php esc_html_e('Skip to Navigation', 'e.nigma-2015'); ?></a>
 <div id="wrapper">
