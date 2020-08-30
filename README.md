@@ -21,9 +21,12 @@
 
 ## Changelog
 
+<<<<<<< HEAD
 ### 1.2.3
 * Changes to ensure compatibility to recent WordPress versions
 
+=======
+>>>>>>> a1a6c149e8da0580acbad667be5b122954ac6051
 ### 1.2.2
 * Fixed an error in build script that resulted in yielding broken JS
 
