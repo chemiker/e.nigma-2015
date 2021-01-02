@@ -4,6 +4,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/767420930abd5ede9110/maintainability)](https://codeclimate.com/github/chemiker/e.nigma-2015/maintainability) [![Build Status](https://travis-ci.com/chemiker/e.nigma-2015.svg?branch=master)](https://travis-ci.com/chemiker/e.nigma-2015)
 
+![e.nigma 2015](https://github.com/chemiker/e.nigma-2015/raw/master/src/theme/screenshot.png)
+
 ## Installation
 
 1. Download or clone the repository
@@ -20,6 +22,9 @@
 * [Civil Footnotes](https://wordpress.org/plugins/civil-footnotes/)
 
 ## Changelog
+
+### 1.2.5
+* Further improvements in the codebase (replaced custom functions with WordPress build-in alternatives)
 
 ### 1.2.4
 * Improved support for WordPress/Gutenberg blocks

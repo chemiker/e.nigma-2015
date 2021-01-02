@@ -90,14 +90,18 @@ header {
 	}
 }
 
-div.pagebar {
+div.nav-links {
+	margin-top: -66px;
+}
+
+div.pagebar,
+div.nav-links {
 	color: $darkbeige;
 	text-align: center;
 	padding: 80px 0 100px 0;
 	font-size: 0.8em;
 	border-top: 7px solid $darkbeige;
 	background-color: $beige;
-	margin-top: -66px;
 
 	&.sitepages {
 		margin-top: 0px;
@@ -119,16 +123,14 @@ div.pagebar {
 		display: inline-block;
 	}
 
-	span.page-numbers,
-	a.page-numbers {
-		font-size: 1.3em;
-		margin-right: 5px;
-	}
-
 	span.page-numbers {
 		color: $navigationbackground;
-		background-color: $darkbeige;
+		background-color: $beige;
 		border: 3px solid $navigationbackground;
+
+		&.dots {
+			border-width: 0px;
+		}
 	}
 
 	&.comment {
@@ -154,11 +156,17 @@ div.pagebar {
 			color: $beige;
 			background-color: $navigationbackground;
 			border: 3px solid $beige;
+
+			&:hover {
+				color: $navigationbackground;
+				border-color: $navigationbackground;
+				background-color: $beige;
+			}
 		}
 
 		&:hover,
-		&.active,
-		&.active:visited,
+		.active,
+		.active:visited,
 		&.page:hover,
 		&.page:focus,
 		&.next.page-numbers,
@@ -168,26 +176,19 @@ div.pagebar {
 			background-color: $beige;
 		}
 
-		&.page-numbers,
-		&.page-numbers:visited {
-			margin-right: 5px;
-			background-color: $darkbeige;
-		}
-
 		&.next.page-numbers,
 		&.prev.page-numbers {
-			font-size: 1.3em;
 			border: none;
 			display: inline;
 			font-weight: normal;
-			color: $beige;
-			background-color: $darkbeige;
+			color: $darkbeige;
+			background-color: none;
 		}
 	}
 }
 
 span.pagebar-category {
-	top: -30px !important;
+	top: 5px !important;
 }
 
 span.pagebar-category,

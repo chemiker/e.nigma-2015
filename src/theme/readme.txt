@@ -24,6 +24,9 @@ If using the "image" post-type it is recommended to set the image you want to sh
 
 ## Changelog
 
+### 1.2.5
+* Further improvements in the codebase (replaced custom functions with WordPress build-in alternatives)
+
 ### 1.2.4
 * Improved support for WordPress/Gutenberg blocks
 * Improved sanitizing outputs

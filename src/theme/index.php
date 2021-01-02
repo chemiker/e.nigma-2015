@@ -48,13 +48,15 @@ global $wp_query;
 if ( $wp_query->max_num_pages > 1 ) :
 	?>
 	<span class="category pagebar-category enigma-icon" data-icon="&#62256;"></span>
-	<div class="pagebar">
-		<?php
-		previous_posts_link();
-		\enigma\Content::Pagebar();
-		next_posts_link(); 
-		?>
-	</div>
+	<?php
+	the_posts_pagination(
+		array(
+			'type'      => 'plain',
+			'prev_text' => '&laquo; ' . esc_html__( 'Previous page', 'e.nigma-2015' ),
+			'next_text' => esc_html__( 'Next page', 'e.nigma-2015' ) . ' &raquo;',
+		)
+	);
+	?>
 	<?php
 endif;
 ?>

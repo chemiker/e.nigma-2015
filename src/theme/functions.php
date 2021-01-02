@@ -10,7 +10,6 @@
  */
 
 require 'functions/class-content.php';
-require 'functions/class-helper.php';
 require 'functions/class-widgets.php';
 require 'functions/class-customizer.php';
 
@@ -130,23 +129,20 @@ add_filter(
 	3
 );
 
-// Add next and number option to wp_link_pages().
-add_filter( 'wp_link_pages_args', '\enigma\Helper::add_next_and_number' );
-
 add_action(
 	'wp_enqueue_scripts',
 	function () {
-		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '1.2.4', true );
-		wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.min.js', array( 'jquery' ), '1.2.4', true );
-		wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.min.js', array( 'jquery' ), '1.2.4', true );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '1.2.5', false );
+		wp_enqueue_script( 'jquery-scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.min.js', array( 'jquery' ), '1.2.5', false );
+		wp_enqueue_script( 'jquery-enigma', get_template_directory_uri() . '/js/jquery.enigma.min.js', array( 'jquery' ), '1.2.5', false );
 	}
 );
 
 add_action(
 	'wp_enqueue_scripts',
 	function () {
-		wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), '1.2.4', 'screen' );
-		wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.min.css', array( 'dashicons' ), '1.2.4', 'print' );
-		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700', array(), '1.2.4' );
+		wp_enqueue_style( 'style', get_template_directory_uri() . '/css/screen.min.css', array( 'dashicons' ), '1.2.5', 'screen' );
+		wp_enqueue_style( 'style-print', get_template_directory_uri() . '/css/print.min.css', array( 'dashicons' ), '1.2.5', 'print' );
+		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:100%7CRoboto+Slab:400,700%7COpen+Sans:400italic,400,700', array(), '1.2.5' );
 	}
 );

@@ -60,7 +60,9 @@ class Customizer {
 			array(
 				'default'           => __( 'Welcome to my blog', 'e.nigma-2015' ),
 				'type'              => 'theme_mod',
-				'sanitize_callback' => function ( $input ) { return wp_kses_post( $input ); }
+				'sanitize_callback' => function ( $input ) {
+					return wp_kses_post( $input );
+				},
 			)
 		);
 

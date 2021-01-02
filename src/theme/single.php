@@ -26,19 +26,7 @@ $post_vars = \enigma\Content::get_post_vars( $format );
 		<?php echo apply_filters( 'the_content', $post_vars['content'] ); ?>
 		<?php if ( $numpages > 1 ) : ?>
 		<div class="pagebar sitepages">
-			<?php
-			wp_link_pages(
-				array(
-					'before'           => '',
-					'after'            => '',
-					'nextpagelink'     => esc_html__( 'Next Page &raquo;', 'e.nigma-2015' ),
-					'previouspagelink' => esc_html__( '&laquo; Previous Page', 'e.nigma-2015' ),
-					'next_or_number'   => 'next_and_number',
-					'pagelink'         => '%',
-					'echo'             => 1,
-				)
-			);
-			?>
+			<?php wp_link_pages(); ?>
 		</div>
 		<?php endif; ?>
 		<div class="post-meta">

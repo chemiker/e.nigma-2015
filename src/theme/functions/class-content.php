@@ -16,74 +16,10 @@ namespace enigma;
  */
 class Content {
 	/**
-	 * Pagebar Clone, originally created by [Sergej Müller](https://sergejmueller.github.io).
-	 * 
-	 * @param  integer $displayedpages Number of displayed pages.
-	 */
-	public static function pagebar( $displayedpages = 6 ) {
-		global $wp_query;
-		$max_num_pages = $wp_query->max_num_pages;
-
-		if ( $max_num_pages <= 1 ) {
-			return;
-		}
-
-		$page         = (int) get_query_var( 'paged' );
-		$roundedrange = ceil( $displayedpages / 2 );
-
-		if ( ! $page ) {
-			$page = 1;
-		}
-
-		if ( $max_num_pages > $displayedpages ) {
-			if ( $page <= $displayedpages ) {
-				$min = 1;
-				$max = $displayedpages + 1;
-			} elseif ( $page >= ( $max_num_pages - $roundedrange ) ) {
-				$min = $max_num_pages - $displayedpages;
-				$max = $max_num_pages;
-			} elseif ( $page >= $displayedpages && $page < ( $max_num_pages - $roundedrange ) ) {
-				$min = $page - $roundedrange;
-				$max = $page + $roundedrange;
-			}
-		} else {
-			$min = 1;
-			$max = $max_num_pages;
-		}
-
-		if ( ! empty( $min ) && ! empty( $max ) ) {
-			for ( $i = $min; $i <= $max; $i++ ) {
-				echo sprintf(
-					' <a href="%s" %s>%d</a>',
-					get_pagenum_link( $i ),
-					( $i === $page ? 'class="page active"' : 'class="page"' ),
-					$i
-				);
-			}
-		}
-	}
-
-	/**
 	 * Get_categories() fetches the post categories and provides them to the theme templates.
 	 */
 	public static function get_categories() {
-		$thecategories      = get_the_category();
-		$numberofcategories = count( $thecategories );
-		$categories         = '';
-
-		foreach ( $thecategories as $categorienumber => $category ) {
-			if ( $categorienumber === $numberofcategories - 1 ) {
-				$spacer = '';
-			} else {
-				$spacer = ', ';
-			}
-			$categories .= sprintf(
-				'<a href="%s">%s</a>%s',
-				get_category_link( $category->term_id ),
-				$category->name,
-				$spacer
-			);
-		}
+		$categories = get_the_category_list( ', ' );
 
 		if ( ! empty( $categories ) ) {
 			$categories = sprintf(
@@ -228,7 +164,9 @@ class Content {
 			return ( $oembed ? $oembed : get_post_meta( get_the_ID(), '_format_' . $format . '_embed', true ) ) . $content;
 		}
 
-		if ( 'image' === $format && $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) ) {
+		$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+
+		if ( $featured_image && 'image' === $format ) {
 			return '<img class="hide" src="' . $featured_image[0] . '" alt="' . get_the_title() . '" />' . $content;
 		}
 
@@ -258,7 +196,9 @@ class Content {
 	 * @return string
 	 */
 	private static function get_css( $format, $css = '' ) {
-		if ( 'image' === $format && $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) ) {
+		$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+
+		if ( $featured_image && 'image' === $format ) {
 			$css = "style=\"background-image: url( '" . $featured_image[0] . "' )\"";
 		}
 

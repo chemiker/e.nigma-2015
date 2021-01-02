@@ -28,4 +28,5 @@ if ( have_comments() ) :
 			</ol>
 		</div>
 	</aside>
-<?php endif;
+	<?php
+endif;
