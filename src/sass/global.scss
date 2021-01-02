@@ -25,6 +25,7 @@
 	color: $blockquotecolor;
 }
 
+figcaption,
 .wp-caption-text {
 	font: {
 		size: 0.7em;
@@ -251,7 +252,8 @@ pre {
 
 code,
 var,
-kbd {
+kbd,
+pre {
 	overflow: auto;
 	font-family: $code;
 	color: $darkbeige;

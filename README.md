@@ -21,6 +21,12 @@
 
 ## Changelog
 
+### 1.2.4
+* Improved support for WordPress/Gutenberg blocks
+* Improved sanitizing outputs
+* Comply with WordPress (Core) coding standards
+* Minor bug fixes
+
 ### 1.2.3
 * Changes to ensure compatibility to recent WordPress versions
 
